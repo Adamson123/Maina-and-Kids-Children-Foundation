@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .gradient-background {
     background: radial-gradient(circle, #886fc7, #349ac2, #2e5d82);
 }
@@ -10,18 +9,18 @@
     background: linear-gradient(to bottom, #3f698f, #bd8713);
 }
 .gradient-modal-bg {
-    background: radial-gradient(circle at 100% 50%, #a0beff, #fff)
+    background: radial-gradient(circle at 100% 50%, #a0beff, #fff);
 }
 
 /* define a keyframe for sliding in from right */
 @keyframes slideInFromRight {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
     10% {
         transform: translateX(80%);
     }
-    
+
     20% {
         transform: translateX(60%);
     }
@@ -49,15 +48,15 @@
     100% {
         transform: translateX(-100%);
     }
-  }
- /* css */
-  .sliding-text {
+}
+/* css */
+.sliding-text {
     /* Adjust duration and easing as needed */
     animation: slideInFromRight 25s linear infinite;
 }
 
 .hover-on-button::before {
-    content: '';
+    content: "";
     z-index: -1;
     position: absolute;
     top: 50%;
@@ -67,7 +66,7 @@
     border-radius: 50%;
     transform-origin: center;
     transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-    transition: transform 0.40s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .hover-on-button:hover::before {
@@ -80,7 +79,7 @@
 }
 
 .highlight::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -91,7 +90,7 @@
     transform: scaleX(0);
     transition: transform 0.2s ease-in-out;
 }
-  
+
 .highlight:hover::before {
     transform: scaleX(1);
     transform-origin: center left;
@@ -111,5 +110,44 @@
 
 /* Defining a class for applying the slide animation */
 .slide-in-bottom {
-    animation: slideInFromBottom 2s ease-out; 
+    animation: slideInFromBottom 2s ease-out;
+}
+
+.hover-on-container {
+    overflow: hidden;
+}
+
+.hover-on-container::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    top: -120px;
+    bottom: -120px;
+    background-color: white;
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    opacity: 0.15;
+    scale: 0;
+    transition: all 0.3s;
+}
+
+.hover-on-container:hover::before {
+    scale: 1;
+}
+
+.arrow-bounce {
+    display: inline-block;
+    animation: arrowBounce 2s infinite ease-in-out;
+}
+
+@keyframes arrowBounce {
+    0%,
+    100% {
+        transform: rotate(180deg) translateX(0);
+    }
+    50% {
+        transform: rotate(180deg) translateX(-4px);
+    }
 }
