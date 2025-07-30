@@ -47,11 +47,11 @@ const Portfolio = () => {
             className="flex justify-center items-center flex-col py-[90px] sm:pt-12 sm:px-[30px] md:px-[50px] lg:px-[60px] xl:px-[70px] 2xl:px-[80px]"
         >
             {/* subtitle */}
-            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699]">
+            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
                 portfolio
             </p>
             {/* bigger text */}
-            <h3 className="sm:text-[32px] text-center md:text-[55px] text-[56px] font-extrabold text-[#0F172A] mb-[30px]">
+            <h3 className="stext-center md:text-[55px] text-[56px] font-extrabold text-[#0F172A] mb-[30px] sm:text-[22px]">
                 {" "}
                 Captured Moments
             </h3>
@@ -65,7 +65,7 @@ const Portfolio = () => {
                         <img
                             src={image}
                             alt={`Portfolio ${index + 1}`}
-                            className="w-full h-full object-contain rounded-x transition-transform duration-500 ease-in-out"
+                            className="w-full h-full object-cover rounded-x transition-transform duration-500 ease-in-out"
                         />
                     </div>
                 ))}

@@ -27,11 +27,11 @@ const RecentCauses = () => {
             className="flex justify-center items-center flex-col sm:px-[20px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px]"
         >
             {/* subtitle */}
-            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699]">
+            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
                 a glimpse into
             </p>
             {/* bigger text */}
-            <h3 className="sm:text-[30px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A] capitalize">
+            <h3 className="sm:text-[22px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A] capitalize">
                 Our Recent Activities
             </h3>
             {/* grid box */}
@@ -47,10 +47,10 @@ const RecentCauses = () => {
                                 alt={`${project.title} Image`}
                                 className="w-[530px] h-[282px] object-cover rounded-md"
                             />
-                            <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px]">
+                            <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[22px]">
                                 {project.title}
                             </h3>
-                            <span className="text-[18px] mb-[25px]">
+                            <span className="text-[18px] mb-[25px] sm:text-[16px]">
                                 {project.content}
                             </span>
                             <div className="sm:flex sm:justify-center">

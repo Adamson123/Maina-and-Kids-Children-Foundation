@@ -34,10 +34,10 @@ const Stories = () => {
             {/* Heading */}
             {/* TODO: Horizontal gap */}
             <div>
-                <p className="text-primary-blue  font-semibold text-[20px] tracking-widest">
+                <p className="text-primary-blue  font-semibold text-[20px] tracking-widest sm:text-[16px]">
                     STORIES
                 </p>
-                <h3 className="leading-[60px] sm:text-[30px]  text-[56px] font-extrabold text-[#0F172A] capitalize">
+                <h3 className="leading-[60px] sm:text-[22px]  text-[56px] font-extrabold text-[#0F172A] capitalize">
                     Voices From The Journey
                 </h3>
             </div>
@@ -79,10 +79,9 @@ const Stories = () => {
                 </p>
                 <div
                     onClick={(e) => e.stopPropagation()}
-                    className="flex flex-col gap-5 text-left bg-white max-w-[470px] rounded-md p-7 max-h-[600px] overflow-y-auto"
+                    className="flex flex-col gap-5 text-left bg-white max-w-[470px] rounded-md p-7 max-h-[600px] overflow-y-auto sm:text-[16px]"
                 >
                     {currentStory?.story.map((paragraph, i) => {
-                        console.log(paragraph);
                         return <p key={i}>{paragraph}</p>;
                     })}
                 </div>

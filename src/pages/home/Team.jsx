@@ -10,11 +10,11 @@ const Team = () => {
             id="team"
             className="flex justify-center items-center flex-col mb-[100px] lg:mb-[70px] xl:mb-[80px] 2xl:mb-[100px] sm:mb-12 md:mb-14"
         >
-            <p className="sm:block text-center text-primary-blue  font-semibold text-[20px] tracking-widest">
+            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
                 THE TEAM
             </p>
 
-            <h3 className="sm:text-[30px] sm:text-center md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]">
+            <h3 className="sm:text-[22px] sm:text-center md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]">
                 The Hearts Behind The Mission
             </h3>
 

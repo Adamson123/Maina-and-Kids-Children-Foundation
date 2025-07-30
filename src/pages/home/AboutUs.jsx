@@ -2,16 +2,16 @@ import image1 from "/assets/AboutUs.webp";
 
 const AboutUsText = () => {
     return (
-        <div className="flex gap-y-8 flex-col">
+        <div className="flex gap-y-5 flex-col">
             <div>
-                <p className="text-primary-blue font-semibold text-[20px]">
+                <p className="text-[#336699]  font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                     About Us
                 </p>
-                <h3 className="sm:leading-[40px] sm:text-[30px] text-[56px] font-extrabold text-[#0F172A]">
+                <h3 className="leading-[70px] sm:leading-[40px] sm:text-[22px] text-[56px] font-extrabold text-[#0F172A]">
                     Maina And Kids Children Foundation
                 </h3>
             </div>
-            <div className="sm:leading-[30px] md:leading-[30px] 2xl:leading-[40px] xl:leading-[40px] lg:leading-[40px] space-y-8 sm:space-y-5 2xl:text-[20px] xl:text-[20px] lg:text-[20px]">
+            <div className="sm:leading-[30px] md:leading-[30px] 2xl:leading-[40px] xl:leading-[40px] lg:leading-[40px] space-y-8 sm:space-y-5 2xl:text-[20px] xl:text-[20px] lg:text-[20px] sm:text-[16px]">
                 <p>
                     Maina & Kids Children Foundation is a Non-governmental,
                     Non-profit Organization, with members dedicated at helping

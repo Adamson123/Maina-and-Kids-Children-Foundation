@@ -90,7 +90,7 @@ const socialLinks = [
 const Form = () => {
     return (
         <form className="flex flex-col gap-5 max-w-[400px] sm:max-w-[330px] sm:items-center">
-            <h3 className="text-2xl font-semibold sm:text-center max-w-[300px]">
+            <h3 className="text-2xl font-semibold sm:text-center max-w-[300px] sm:text-[22px]">
                 Sign Up For Our Monthly Newsletter
             </h3>
             <p className="text-sm sm:text-center">
@@ -117,7 +117,7 @@ const Footer = () => {
         <div className="bg-black items-center text-white pt-20 flex flex-col gap-16">
             <div className="grid grid-cols-2 sm:grid-cols-1 sm:gap-y-10  sm:grid-rows-2 sm:justify-evenly items-start md:px-16 lg:gap-x-28 xl:gap-x-44 2xl:gap-x-[300px]">
                 {/* Links */}
-                <div className="grid grid-cols-2 gap-y-[60px] sm:justify-items-center">
+                <div className="grid grid-cols-2 gap-y-[60px] sm:justify-items-center sm:text-[16px]">
                     {links.map((link, index) =>
                         index !== links.length - 1 ? (
                             <Link

@@ -39,15 +39,15 @@ const Objectives = () => {
             className="flex justify-center flex-col sm:px-[16px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px] gap-[10px]"
         >
             {/* subtitle */}
-            <p className="text-[#336699] sm:text-center md:text-center font-semibold text-xl capitalize font-montserrat">
+            <p className="text-[#336699] sm:text-center md:text-center font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                 What We Do
             </p>
             {/* bigger text */}
-            <h3 className="sm:text-[32px] md:text-[55px] sm:text-center md:text-center text-[56px] font-extrabold text-[#0F172A]">
+            <h3 className="sm:text-[22px] md:text-[55px] sm:text-center md:text-center text-[56px] font-extrabold text-[#0F172A] sm:leading-[40px] leading-[70px]">
                 Giving Little Children Chances Through;
             </h3>
             {/* sub text only on mobile */}
-            <p className="hidden sm:block text-center text-[#0F172A]">
+            <p className="hidden sm:block text-center text-[#0F172A] sm:text-[16px]">
                 Our organization caters to children and girls, we have programs
                 that are intended for them.
             </p>
@@ -65,10 +65,10 @@ const Objectives = () => {
                                 className="h-[90px] w-[90px] object-cover"
                             />
                             <div>
-                                <h4 className="text-[24px] h-[30px] font-semibold capitalize mb-[20px] sm:text-center md:text-center md:whitespace-nowrap md:text-lg md:my-[10px]">
+                                <h4 className="text-[24px] h-[30px] font-semibold capitalize mb-[20px] sm:text-center md:text-center md:whitespace-nowrap md:text-lg md:my-[10px] sm:text-[20px]">
                                     {card.title}
                                 </h4>
-                                <p className="hover:cursor-default before:bg-[#ffe9b7] sm:text-center md:text-center">
+                                <p className="hover:cursor-default before:bg-[#ffe9b7] sm:text-center md:text-center sm:text-[16px]">
                                     {card.desc}
                                 </p>
                             </div>
