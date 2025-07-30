@@ -148,6 +148,6 @@
         transform: rotate(180deg) translateX(0);
     }
     50% {
-        transform: rotate(180deg) translateX(-4px);
+        transform: rotate(180deg) translateX(-7px);
     }
 }

@@ -66,7 +66,7 @@ const Stories = () => {
 
             <div
                 onClick={() => setCurrentStory(null)}
-                className={`fixed inset-0 bg-black/55 z-20 items-center justify-center flex flex-col gap-2 p-3 transition-all ${
+                className={`fixed inset-0 bg-black/55 z-[100] items-center justify-center flex flex-col gap-2 p-3 transition-all ${
                     currentStory ? "scale-1" : "scale-0"
                 }`}
             >

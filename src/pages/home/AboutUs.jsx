@@ -1,14 +1,16 @@
-import image1 from "/assets/AboutUs.png";
+import image1 from "/assets/AboutUs.webp";
 
 const AboutUsText = () => {
     return (
-        <div className="space-y-3 md:text-center sm:text-center md:px-10">
-            <p className="text-primary-blue font-semibold text-[20px]">
-                About Us
-            </p>
-            <h3 className=" sm:leading-[40px] leading-[60px] sm:text-[30px] text-[56px] font-extrabold text-[#0F172A]">
-                Maina And Kids Children Foundation
-            </h3>
+        <div className="flex gap-y-8 flex-col">
+            <div>
+                <p className="text-primary-blue font-semibold text-[20px]">
+                    About Us
+                </p>
+                <h3 className="sm:leading-[40px] sm:text-[30px] text-[56px] font-extrabold text-[#0F172A]">
+                    Maina And Kids Children Foundation
+                </h3>
+            </div>
             <div className="sm:leading-[30px] md:leading-[30px] 2xl:leading-[40px] xl:leading-[40px] lg:leading-[40px] space-y-8 sm:space-y-5 2xl:text-[20px] xl:text-[20px] lg:text-[20px]">
                 <p>
                     Maina & Kids Children Foundation is a Non-governmental,
@@ -35,7 +37,7 @@ const AboutUsText = () => {
 const About = () => {
     return (
         <>
-            <div className="grid grid-cols-[42%_58%] gap-x-12 sm:px-[20px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:py-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
+            <div className="grid grid-cols-[42%_58%] gap-x-12 lg:p-[60px] xl:p-[100px] 2xl:py-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
                 <div className="full py-6 md:py-0 h-[calc(100%-20px)]">
                     {/* Todo alt */}
                     <img
@@ -48,13 +50,13 @@ const About = () => {
                 <AboutUsText />
             </div>
 
-            <div className="grid grid-cols-1 gap-x-12 sm:px-[20px] sm:pt-[70px] sm:pb-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:py-[100px] 2xl:px-[200px] items-center lg:hidden xl:hidden 2xl:hidden">
+            <div className="grid grid-cols-1 gap-x-12 sm:px-[20px] sm:pt-[70px] sm:pb-[25px] md:pt-[90px] md:pb-[35px] items-center lg:hidden xl:hidden 2xl:hidden md:px-10 md:max--[920px]">
                 {/* Text */}
                 <AboutUsText />
 
-                <div className="full py-6 md:px-20">
+                <div className="full py-6">
                     <img
-                        className="object-cover w-full h-full  rounded-md"
+                        className="object-cover w-full h-full rounded-md"
                         src={image1}
                         alt=""
                     />

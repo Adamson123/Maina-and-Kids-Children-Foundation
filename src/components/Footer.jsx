@@ -72,16 +72,24 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const links = [
-    { href: "#", label: "About Us" },
-    { href: "#", label: "Girl Child" },
-    { href: "#", label: "Our Works" },
-    { href: "#", label: "Child Care" },
-    { href: "#", label: "Contact Us" },
+    { href: "/about", label: "About Us" },
+    { href: "/girl-child", label: "Girl Child" },
+    { href: "/projects", label: "Our Works" },
+    { href: "/projects/#child-care", label: "Child Care" },
+    { href: "/projects/#almajiri-in-tech", label: "Almajiri In Tech" },
+];
+
+const socialLinks = [
+    { href: "#", icon: <FaYoutube />, title: "Youtube" },
+    { href: "#", icon: <FaFacebookF />, title: "Facebook" },
+    { href: "#", icon: <FaXTwitter />, title: "Twitter" },
+    { href: "#", icon: <FaInstagram />, title: "Instagram" },
+    { href: "#", icon: <FaLinkedinIn />, title: "LinkedIn" },
 ];
 
 const Form = () => {
     return (
-        <form className="flex flex-col gap-5 max-w-[400px] sm:items-center">
+        <form className="flex flex-col gap-5 max-w-[400px] sm:max-w-[330px] sm:items-center">
             <h3 className="text-2xl font-semibold sm:text-center max-w-[300px]">
                 Sign Up For Our Monthly Newsletter
             </h3>
@@ -106,15 +114,29 @@ const Form = () => {
 
 const Footer = () => {
     return (
-        <div className="bg-black items-center text-white pt-20 px-20  2xl:px-20 flex flex-col gap-16">
-            <div className="grid grid-cols-2 sm:grid-cols-1 sm:grid-rows-2   sm:justify-evenly items-start gap-x-20 2xl:gap-x-52">
+        <div className="bg-black items-center text-white pt-20 flex flex-col gap-16">
+            <div className="grid grid-cols-2 sm:grid-cols-1 sm:gap-y-10  sm:grid-rows-2 sm:justify-evenly items-start md:px-16 lg:gap-x-28 xl:gap-x-44 2xl:gap-x-[300px]">
                 {/* Links */}
-                <div className="grid grid-cols-2 gap-9 sm:justify-items-center">
-                    {links.map((link, index) => (
-                        <Link to={link.href} key={index}>
-                            {link.label}
-                        </Link>
-                    ))}
+                <div className="grid grid-cols-2 gap-y-[60px] sm:justify-items-center">
+                    {links.map((link, index) =>
+                        index !== links.length - 1 ? (
+                            <Link
+                                to={link.href}
+                                key={index}
+                                className="hover:opacity-[0.8]"
+                            >
+                                {link.label}
+                            </Link>
+                        ) : (
+                            <Link
+                                to={link.href}
+                                key={index}
+                                className="hover:opacity-[0.8] col-span-2"
+                            >
+                                {link.label}
+                            </Link>
+                        )
+                    )}
                 </div>
                 {/* Form */}
                 <Form />
@@ -123,33 +145,16 @@ const Footer = () => {
             <div className="text-sm  pb-7 flex gap-7 sm:flex-col text-center items-center justify-center">
                 <p>Maina and kids children foundation @ 2024</p>
                 <div className="flex items-center gap-6">
-                    <a href="" className="hover:text-[#0f172a]" title="Youtube">
-                        <FaYoutube />
-                    </a>
-                    <a
-                        href=""
-                        className="hover:text-[#0f172a]"
-                        title="Facebook"
-                    >
-                        <FaFacebookF />
-                    </a>
-                    <a href="" className="hover:text-[#0f172a]" title="Twitter">
-                        <FaXTwitter />
-                    </a>
-                    <a
-                        href=""
-                        className="hover:text-[#0f172a]"
-                        title="Instagram"
-                    >
-                        <FaInstagram />
-                    </a>
-                    <a
-                        href=""
-                        className="hover:text-[#0f172a]"
-                        title="LinkedIn"
-                    >
-                        <FaLinkedinIn />
-                    </a>
+                    {socialLinks.map((social, index) => (
+                        <a
+                            href={social.href}
+                            className="hover:text-[#0f172a]"
+                            title={social.title}
+                            key={index}
+                        >
+                            {social.icon}
+                        </a>
+                    ))}
                 </div>
             </div>
         </div>

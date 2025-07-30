@@ -1,6 +1,6 @@
-import image1 from "/assets/girl-child-1.jpg";
-import image2 from "/assets/girl-child-2.jpg";
-import image3 from "/assets/AboutUs.png";
+import image1 from "/assets/girl-child-1.webp";
+import image2 from "/assets/girl-child-2.webp";
+import image3 from "/assets/AboutUs.webp";
 
 const stories = [
     {

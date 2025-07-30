@@ -52,7 +52,7 @@ const Objectives = () => {
                 that are intended for them.
             </p>
             {/* grid box */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-2 gap-[95px] mt-[50px] 2xl:grid-cols-2">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-2 gap-[95px] mt-[50px] sm:gap-[50px] 2xl:grid-cols-2">
                 {data.map((card) => {
                     return (
                         <div

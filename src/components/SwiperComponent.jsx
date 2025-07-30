@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 // import images
-import image1 from "/assets/portfolio-img-1.png";
-import image2 from "/assets/portfolio-img-2.png";
-import image3 from "/assets/portfolio-img-3.png";
-import image4 from "/assets/portfolio-img-4.png";
+import image1 from "/assets/portfolio-img-1.webp";
+import image2 from "/assets/portfolio-img-2.webp";
+import image3 from "/assets/portfolio-img-3.webp";
+import image4 from "/assets/portfolio-img-4.webp";
 import { BiArrowBack } from "react-icons/bi";
 
 const SwiperComponent = () => {

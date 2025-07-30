@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
-
 // import data
-import { projects } from "../../data/projects";
-import { useNavigate } from "react-router-dom";
+//import { projects } from "../../data/projects";
+import image1 from "/assets/girl-child-projects/hygiene.webp";
+import image2 from "/assets/international-women.webp";
+
+const recentActivities = [
+    {
+        title: "World Menstrual Hygiene Day",
+        content: "To commemorate the world menstrual hygiene day, the girl...",
+        link: "/girl-child/#hygiene",
+        img: image1,
+    },
+    {
+        title: "International Women’s Day",
+        content: "Celebrating the international women’s day with activities...",
+        link: "/girl-child/#women's-day",
+        img: image2,
+    },
+];
 
 const RecentCauses = () => {
-    const navigate = useNavigate();
-
     return (
         <div
             id="recentCauses"
@@ -20,35 +32,35 @@ const RecentCauses = () => {
             </p>
             {/* bigger text */}
             <h3 className="sm:text-[30px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A] capitalize">
-                our most recent causes
+                Our Recent Activities
             </h3>
             {/* grid box */}
             <div className="grid sm:grid-cols-1 grid-cols-2  sm:mt-[30px] mt-[50px] sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
-                {projects.map((project) => {
+                {recentActivities.map((project, i) => {
                     return (
                         <div
                             className="flex flex-col sm:items-center sm:text-center"
-                            key={project.id}
+                            key={i}
                         >
                             <img
                                 src={`${project.img}`}
-                                alt={`Image ${project.id}`}
+                                alt={`${project.title} Image`}
+                                className="w-[530px] h-[282px] object-cover rounded-md"
                             />
                             <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px]">
                                 {project.title}
                             </h3>
                             <span className="text-[18px] mb-[25px]">
-                                {project.description.substring(0, 70) + " ..."}
+                                {project.content}
                             </span>
                             <div className="sm:flex sm:justify-center">
-                                <Link to={"/projects"}>
-                                    <Button
-                                        content={"Learn More"}
-                                        btnStyle={
-                                            "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white mt-4"
-                                        }
-                                    />
-                                </Link>
+                                <Button
+                                    link={project.link}
+                                    content={"Learn More"}
+                                    btnStyle={
+                                        "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white mt-4"
+                                    }
+                                />
                             </div>
                         </div>
                     );
