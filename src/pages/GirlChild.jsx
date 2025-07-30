@@ -30,11 +30,11 @@ const GirlChild = () => {
             <div className="">
                 {/* Header 1 */}
                 <div className="flex justify-center items-center flex-col p-[100px] sm:px-0 sm:pb-6  gap-[10px]">
-                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat">
+                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         GIRL CHILD
                     </h3>
-                    <h1 className="text-[56px] sm:text-3xl sm:text-center font-extrabold text-[0F172A]">
-                        Girl Child Program
+                    <h1 className="text-[56px] sm:text-[22px] sm:text-center font-extrabold text-[#0F172A]">
+                        Girl child Program
                     </h1>
                 </div>
 
@@ -47,7 +47,7 @@ const GirlChild = () => {
                     />
                     <div className="flex gap-[24px] items-center">
                         <img className="" src={Line} alt="" />
-                        <p className="text-[18px]">
+                        <p className="text-[18px] sm:text-[16px]">
                             The Girl Child Program was launched to carry out
                             awareness activities among young girls in rural
                             communities in the Northern part of Nigeria on
@@ -62,18 +62,18 @@ const GirlChild = () => {
             <div>
                 {/* Header 2 */}
                 <div className="flex justify-center items-center flex-col p-[100px] sm:px-0 sm:pb-0 gap-[10px]">
-                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat">
+                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         PROBLEM
                     </h3>
-                    <h1 className="text-[56px] sm:text-3xl font-extrabold text-[0F172A] text-center">
+                    <h1 className="text-[56px] sm:text-3xl font-extrabold text-[#0F172A] text-center sm:text-[22px]">
                         A glimpse into the problem
                     </h1>
                 </div>
 
                 {/* Paragraph */}
-                <div className="sm:px-[50px] md:px-[20px] px-[100px] items-center mb-10">
+                <div className="sm:px-[50px] md:px-[20px] px-[100px] items-center mb-10 text-[18px] sm:text-[16px]">
                     <div className="grid grid-cols-2 sm:grid-cols-1 py-10 gap-[91px] sm:gap-8">
-                        <p className="bg-[#F9F9F9] rounded-[10px] py-5 px-5 text-[18px]">
+                        <p className="bg-[#F9F9F9] rounded-[10px] py-5 px-5">
                             The situation of the girl child in the northern part
                             of Nigeria is a toxic situation of disregard, lack
                             of awareness, lack of proper amenities,
@@ -83,7 +83,7 @@ const GirlChild = () => {
                             staying home and giving birth. no education, no
                             health awareness, no skills, no dreams and no voice.
                         </p>
-                        <p className=" bg-[#CA8A04] rounded-[10px] py-5 px-5 text-white text-[18px]">
+                        <p className=" bg-[#CA8A04] rounded-[10px] py-5 px-5 text-white">
                             In a typical northern home the girl child is allowed
                             to get to 14 before she is shipped into marriage, in
                             cases where she gets lucky and starts school, She's
@@ -97,7 +97,7 @@ const GirlChild = () => {
                         </p>
                     </div>
                     <div className="grid justify-center px-[200px] sm:px-0">
-                        <p className="  bg-[#9747FF] rounded-[10px] py-5 px-5 text-white text-[18px]">
+                        <p className="  bg-[#9747FF] rounded-[10px] py-5 px-5 text-white">
                             These problems stem from cultural and religious
                             beliefs that are still deep rooted and upheld in the
                             society, even though one might argue that with
@@ -112,13 +112,13 @@ const GirlChild = () => {
             </div>
 
             {/* Third Section */}
-            <div className="sm:px-[10px] md:px-[10px] px-[100px] ">
+            <div className="sm:px-[10px] md:px-[10px] px-[100px]">
                 {/* Header 2 */}
                 <div className="flex justify-center items-center flex-col p-[100px] sm:px-0 sm:pb-6 gap-[10px]">
-                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat">
+                    <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         OUR OBJECTIVES{" "}
                     </h3>
-                    <h1 className="text-[56px] sm:text-3xl text-center font-extrabold text-[0F172A]">
+                    <h1 className="text-[56px] sm:text-[22px] text-center font-extrabold text-[#0F172A]">
                         How we are tackling the problem
                     </h1>
                 </div>
@@ -171,7 +171,7 @@ const GirlChild = () => {
             {/* Fourth Section */}
             <div className="px-[100px] sm:px-[30px] space-y-5 md:px-[40px]">
                 {/* Header */}
-                <h1 className="text-[56px] sm:text-3xl font-extrabold text-[0F172A]">
+                <h1 className="text-[56px] sm:text-[22px] text-center font-extrabold text-[#0F172A] ">
                     Projects
                 </h1>
                 <div className="flex gap-8 justify-center sm:flex-col md:text-base leading-8 md:leading-7">
@@ -183,7 +183,7 @@ const GirlChild = () => {
                                 key={index}
                                 className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg h-full scroll-mt-36`}
                             >
-                                <h3 className="text-2xl font-semibold">
+                                <h3 className="text-2xl sm:text-[20px] font-semibold">
                                     {project.title}
                                 </h3>
                                 <div className="h-[250px]">
@@ -193,7 +193,7 @@ const GirlChild = () => {
                                         className="rounded-lg h-full w-full object-cover"
                                     />
                                 </div>
-                                <div className="text-[20px]">
+                                <div className="text-[20px] sm:text-[16px]">
                                     {project.content}
                                 </div>
                             </div>
@@ -207,7 +207,7 @@ const GirlChild = () => {
                                 key={index}
                                 className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg`}
                             >
-                                <h3 className="text-2xl font-semibold">
+                                <h3 className="text-2xl sm:text-[20px] font-semibold">
                                     {project.title}
                                 </h3>
                                 <div className="h-[250px]">
@@ -217,7 +217,7 @@ const GirlChild = () => {
                                         className="rounded-lg h-full w-full object-cover"
                                     />
                                 </div>
-                                <div className="text-[20px]">
+                                <div className="text-[20px] sm:text-[16px]">
                                     {project.content}
                                 </div>
                             </div>
@@ -226,7 +226,7 @@ const GirlChild = () => {
                 </div>
             </div>
 
-            <div className="flex  sm:flex-col px-[100px] gap-x-10 gap-5 sm:px-[50px] justify-center items-center my-20">
+            <div className="flex  sm:flex-col px-[100px] gap-6  sm:px-[50px] justify-center items-center my-20">
                 <Button
                     content={"Donate"}
                     btnStyle={

@@ -5,10 +5,10 @@ export const ProjectCard = ({ project }) => {
     const secondContent = project.contents[1];
     return (
         <div id={project.id} className="flex flex-col scroll-mt-36">
-            <h2 className="text-3xl font-bold text-center text-primary-blue mb-7 sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px]">
+            <h2 className="text-3xl font-bold text-center text-primary-blue mb-7 sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px] max-w-[1070px] leading-[70px] sm:leading-[40px] self-center">
                 {project.title}
             </h2>
-            <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838]">
+            <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838] sm:text-[16px]">
                 {/* First Content*/}
                 <div className="flex items-center gap-10 leading-7 max-w-[1320px] sm:flex-col-reverse">
                     <img
@@ -68,7 +68,7 @@ export const ProjectChildCareCard = ({ childCareStory }) => {
                 alt={`${childCareStory.title} image`}
                 className="rounded-md object-cover max-h-[250px] xl:max-h-[320px] 2xl:max-h-[320px]  w-[50%] sm:w-full"
             />
-            <div className="leading-7 w-[50%] sm:w-full">
+            <div className="leading-7 w-[50%] sm:w-full sm:text-[16px]">
                 <p>
                     <strong className="text-primary-blue">
                         {childCareStory.title}:{" "}

@@ -25,12 +25,12 @@ const Projects = () => {
     }, [location.hash]);
 
     return (
-        <div className="pt-40 flex flex-col gap-32 pb-32">
+        <div className="pt-40 flex flex-col gap-32 pb-32 w-full">
             <ProjectCard project={safenetProgram} />
             <ProjectCard project={almajiriInTech} />
             <ProjectCard project={mainaKidsFoundation} />
             <div id="child-care" className="flex flex-col gap-7 scroll-mt-36">
-                <h2 className="font-bold text-center text-primary-blue sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[45px] 2xl:text-[45px]">
+                <h2 className="font-bold text-center max-w-[1070px] leading-[70px] sm:leading-[40px] text-primary-blue sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[45px] 2xl:text-[45px] self-center">
                     Child Care
                 </h2>
                 <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838]">

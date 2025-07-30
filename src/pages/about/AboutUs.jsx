@@ -35,7 +35,7 @@ const AboutUs = () => {
             {/* hero section */}
             <div className="space-y-8">
                 {/* head */}
-                <h1 className="text-[#336699] uppercase font-bold sm:text-[20px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px] text-center">
+                <h1 className="text-[#336699] uppercase font-bold sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px] text-center">
                     maina and kids children foundation
                 </h1>
                 <img src={image} alt="Display Image" />
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 {/* grid grid-cols-[60%_40%] md:grid-cols-1 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-2 */}
                 <div className="gap-7 sm:px-4 flex md:flex-col md:items-center sm:flex-col sm:items-center">
                     {/* text */}
-                    <div className="flex flex-col gap-[40px] w-[70%] md:w-full sm:w-full text-[18px]">
+                    <div className="flex flex-col gap-[40px] w-[70%] md:w-full sm:w-full text-[18px] sm:text-[15px] sm:text-center md:text-center">
                         <p className="tracking-wide leading-9">
                             Maina & Kids children foundation is a
                             Non-governmental, Non-profit Organization, with
@@ -111,7 +111,7 @@ const AboutUs = () => {
                 id="team"
                 className="w-full pb-36 px-28 lg:px-16 sm:px-7 max-w-[1275px] space-y-7 scroll-mt-36"
             >
-                <h3 className="text-4xl font-bold text-center">
+                <h3 className="text-4xl font-bold text-center sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px]">
                     The Hearts Behind The Mission
                 </h3>
                 {/* Team */}

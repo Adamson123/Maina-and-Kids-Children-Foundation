@@ -18,14 +18,12 @@ const Hero = () => {
                     <Button
                         content={"donate"}
                         btnStyle={
-                            "bg-[#326699] sm:text-[14px] text-white before:bg-[#0f172a] border-none"
+                            "bg-[#326699] text-white before:bg-[#0f172a] border-none"
                         }
                     />
                     <Button
                         content={"get involved"}
-                        btnStyle={
-                            "before:bg-[#0f172a] sm:text-[14px] text-white border-2"
-                        }
+                        btnStyle={"before:bg-[#0f172a] text-white border-2"}
                     />
                 </div>
             </div>

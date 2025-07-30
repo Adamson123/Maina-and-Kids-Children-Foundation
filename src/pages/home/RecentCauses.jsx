@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Button from "../../components/Button";
 // import data
 //import { projects } from "../../data/projects";
@@ -47,7 +46,7 @@ const RecentCauses = () => {
                                 alt={`${project.title} Image`}
                                 className="w-[530px] h-[282px] object-cover rounded-md"
                             />
-                            <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[22px]">
+                            <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[20px]">
                                 {project.title}
                             </h3>
                             <span className="text-[18px] mb-[25px] sm:text-[16px]">
