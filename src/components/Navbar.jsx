@@ -5,11 +5,11 @@ import Logo from "/assets/logo-bar-transparent-bg.webp";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MenuContext } from "../context/MenuContext";
 import { NavbarProjects } from "../data/projects";
-import Button from "./Button";
 import { BiChevronDown, BiMailSend, BiPhone } from "react-icons/bi";
 import { contact } from "../data/contact";
+import DonateButton from "./DonateButton";
 
-const DropDown = ({ isOurWorkActive }) => {
+const OurWorkDropdown = ({ isOurWorkActive }) => {
     const navigate = useNavigate();
 
     return (
@@ -69,7 +69,7 @@ const Navbar = () => {
                 isScrolled || location.pathname !== "/"
                     ? "bg-white"
                     : "bg-transparent"
-            } transition-all duration-300 h-[85px] flex justify-between items-center sm:px-[20px] md:px-[30px] lg:px-[30px] xl:px-[100px] 2xl:px-[100px] fixed top-0 z-[80] w-full sm:pr-1`}
+            } transition-all duration-300 h-[82px] flex justify-between items-center sm:px-[20px] md:px-[30px] lg:px-[30px] xl:px-[100px] 2xl:px-[100px] fixed top-0 z-[80] w-full sm:pr-1`}
         >
             {/* image */}
             <div onClick={() => navigate("/")} className="cursor-pointer">
@@ -104,7 +104,7 @@ const Navbar = () => {
                             }`}
                         />
                     </span>
-                    <DropDown isOurWorkActive={isOurWorkActive} />
+                    <OurWorkDropdown isOurWorkActive={isOurWorkActive} />
                 </li>
                 {/* Contact Us */}
                 <li
@@ -154,14 +154,8 @@ const Navbar = () => {
                     About Us
                 </li>
                 {/* Donate button */}
-
                 <li>
-                    <Button
-                        content={"donate"}
-                        btnStyle={
-                            "bg-[#326699] text-white before:bg-[#0f172a] md:w-[170px] border-none"
-                        }
-                    />
+                    <DonateButton btnStyle={"md:w-[170px]"} />
                 </li>
             </ul>
             {/* mobile view menu tab */}

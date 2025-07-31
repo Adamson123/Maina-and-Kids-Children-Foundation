@@ -151,3 +151,51 @@
         transform: rotate(180deg) translateX(-7px);
     }
 }
+
+/*
+    * Responsive text sizes for the header in the results section
+    * Adjusts based on screen size using Tailwind's responsive utilities
+ */
+.res-header-size {
+    @apply sm:text-[24px] md:text-[33px] lg:text-[40px] xl:text-[50px] 2xl:text-[52px];
+}
+
+/* @keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.image-slide {
+    animation: 2s slide infinite linear;
+    right: -100%;
+}
+
+.image-slide2 {
+    animation: 2s slide infinite linear;
+    right: 100%;
+}
+
+.image-slide-container:hover .image-slide {
+    animation-play-state: paused;
+} */
+
+@keyframes scrollLeft {
+    to {
+        left: -500px;
+    }
+}
+
+.portfolio-image {
+    animation-name: scrollLeft;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+}
+
+.image-slide:hover .portfolio-image {
+    animation-play-state: paused;
+}

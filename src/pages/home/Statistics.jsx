@@ -78,7 +78,7 @@ const Support = () => {
     return (
         <div
             ref={statisticsRef}
-            className="flex bg-[#2563EB] sm:flex-col py-[80px] text-white sm:gap-20 justify-center xl:gap-32 2xl:gap-40 md:gap-16 lg:gap-20 sm:items-center"
+            className="flex bg-[#2563EB] mt-[65px] sm:flex-col py-[80px] text-white sm:gap-20 justify-center xl:gap-32 2xl:gap-40 md:gap-16 lg:gap-20 sm:items-center"
         >
             {statistics.map((stat, i) => (
                 <div

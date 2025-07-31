@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { NavbarProjects } from "../data/projects";
 import { BiMailSend, BiPhone } from "react-icons/bi";
 import { contact } from "../data/contact";
+import DonateButton from "./DonateButton";
 
 const MenuBar = () => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const MenuBar = () => {
     return (
         <div>
             {isClicked && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full lg:hidden xl:hidden 2xl:hidden z-[90]">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full md:hidden lg:hidden xl:hidden 2xl:hidden z-[90]">
                     <section
                         className={`${
                             isClicked ? "translate-x-0" : "translate-x-[-100%]"
@@ -23,14 +24,14 @@ const MenuBar = () => {
                             {/* closing icon on menu bar */}
                             <div
                                 onClick={() => handleMenuClose()}
-                                className="s:flex sm:flex flex-col justify-center items-center lg:hidden xl:hidden md:hidden cursor-pointer gap-[5px] mr-4 absolute right-5 -top-[82px]"
+                                className="s:flex sm:flex flex-col justify-center items-center lg:hidden xl:hidden md:hidden cursor-pointer gap-[5px] mr-4 absolute right-5 -top-[80px]"
                             >
                                 <div className="h-[3px] w-7 rounded-full rotate-45 bg-[#326699] translate-y-4" />
                                 <div className="h-[3px] w-7 rounded-full opacity-0" />
                                 <div className="h-[3px] w-7 rounded-full -rotate-45 bg-[#326699] -translate-y-0" />
                             </div>
                             {/* links */}
-                            <ul className="flex flex-col gap-6 justify-center text-[#453838] font-semibold text-[20px] capitalize mt-[110px] px-5">
+                            <ul className="flex flex-col gap-6 justify-center text-[#453838] font-semibold text-[20px] capitalize mt-[100px] px-5">
                                 <li className="cursor-pointer">
                                     <span className="font-bold">Our Work</span>
                                     <ul className="pl-3 font-thin">
@@ -83,13 +84,7 @@ const MenuBar = () => {
                             </ul>
                             {/* buttons */}
                             <div className="flex flex-col w-full items-center gap-6 my-10 px-5">
-                                <Button
-                                    content={"donate"}
-                                    btnStyle={
-                                        "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white w-full"
-                                    }
-                                    linkStyle={"w-full"}
-                                />
+                                <DonateButton btnStyle={"w-full"} />
                                 <Button
                                     content={"get involved"}
                                     btnStyle={

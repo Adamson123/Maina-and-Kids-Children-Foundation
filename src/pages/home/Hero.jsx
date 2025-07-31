@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import DonateButton from "../../components/DonateButton";
 // import images
 
 const Hero = () => {
@@ -15,12 +16,7 @@ const Hero = () => {
                 </p>
                 {/* button */}
                 <div className="flex sm:flex-col sm:items-center sm:gap-[15px] mt-8 gap-[30px] sm:w-[90%] w-[542px]">
-                    <Button
-                        content={"donate"}
-                        btnStyle={
-                            "bg-[#326699] text-white before:bg-[#0f172a] border-none"
-                        }
-                    />
+                    <DonateButton />
                     <Button
                         content={"get involved"}
                         btnStyle={"before:bg-[#0f172a] text-white border-2"}

@@ -23,18 +23,20 @@ const RecentCauses = () => {
     return (
         <div
             id="recentCauses"
-            className="flex justify-center items-center flex-col sm:px-[20px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px]"
+            className="flex justify-center items-center flex-col sm:gap-[30px] gap-[50px] pt-24 sm:px-[20px] md:px-[35px] lg:px-[60px] xl:px-[100px] 2xl:px-[100px]"
         >
-            {/* subtitle */}
-            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
-                a glimpse into
-            </p>
-            {/* bigger text */}
-            <h3 className="sm:text-[22px] sm:text-center sm:whitespace-nowrap md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A] capitalize">
-                Our Recent Activities
-            </h3>
+            <div className="text-center">
+                {/* subtitle */}
+                <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
+                    a glimpse into
+                </p>
+                {/* bigger text */}
+                <h3 className="sm:text-center sm:whitespace-nowrap md:text-center font-extrabold text-[#0F172A] capitalize res-header-size">
+                    Our Recent Activities
+                </h3>
+            </div>
             {/* grid box */}
-            <div className="grid sm:grid-cols-1 grid-cols-2  sm:mt-[30px] mt-[50px] sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
+            <div className="grid sm:grid-cols-1 grid-cols-2 sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
                 {recentActivities.map((project, i) => {
                     return (
                         <div

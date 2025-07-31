@@ -1,11 +1,12 @@
 import Button from "../../components/Button";
+import DonateButton from "../../components/DonateButton";
 
 export const ProjectCard = ({ project }) => {
     const firstContent = project.contents[0];
     const secondContent = project.contents[1];
     return (
         <div id={project.id} className="flex flex-col scroll-mt-36">
-            <h2 className="text-3xl font-bold text-center text-primary-blue mb-7 sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px] max-w-[1070px] leading-[70px] sm:leading-[40px] self-center">
+            <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1070px] self-center res-header-size">
                 {project.title}
             </h2>
             <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838] sm:text-[16px]">
@@ -43,12 +44,7 @@ export const ProjectCard = ({ project }) => {
                 </div>
             </div>
             <div className="flex items-center justify-center gap-6 mt-6 sm:flex-col  sm:gap-y-4">
-                <Button
-                    content={"donate"}
-                    btnStyle={
-                        "bg-[#326699] text-white before:bg-[#0f172a] border-white"
-                    }
-                />
+                <DonateButton />
                 <Button
                     content={"get involved"}
                     btnStyle={

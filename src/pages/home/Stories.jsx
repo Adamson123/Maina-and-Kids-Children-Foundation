@@ -29,15 +29,16 @@ const StoryCard = ({ story, setCurrentStory }) => {
 const Stories = () => {
     const [currentStory, setCurrentStory] = useState(null);
 
+    //sm:py-12
     return (
-        <div className="flex flex-col items-center justify-center text-center sm:px-[20px] sm:py-12 md:px-[25px] lg:px-[50px] xl:px-[90px] 2xl:px-[130px] sm:gap-[30px] gap-[50px]  pt-14">
+        <div className="flex flex-col items-center justify-center text-center sm:px-[20px] md:px-[25px] lg:px-[50px] xl:px-[90px] 2xl:px-[130px] sm:gap-[30px] gap-[50px]  pt-24">
             {/* Heading */}
             {/* TODO: Horizontal gap */}
             <div>
                 <p className="text-primary-blue  font-semibold text-[20px] tracking-widest sm:text-[16px]">
                     STORIES
                 </p>
-                <h3 className="leading-[60px] sm:text-[22px]  text-[56px] font-extrabold text-[#0F172A] capitalize">
+                <h3 className="res-header-size font-extrabold text-[#0F172A] capitalize">
                     Voices From The Journey
                 </h3>
             </div>

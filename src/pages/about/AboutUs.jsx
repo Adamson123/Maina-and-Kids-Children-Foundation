@@ -11,6 +11,7 @@ import {
 import { useLocation } from "react-router-dom";
 import { MultiProfileContainer, ProfileCard } from "./Profile";
 import womenImage from "/assets/women.webp";
+import DonateButton from "../../components/DonateButton";
 
 const AboutUs = () => {
     const location = useLocation();
@@ -35,7 +36,7 @@ const AboutUs = () => {
             {/* hero section */}
             <div className="space-y-8">
                 {/* head */}
-                <h1 className="text-[#336699] uppercase font-bold sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px] text-center">
+                <h1 className="text-[#336699] uppercase font-bold res-header-size text-center">
                     maina and kids children foundation
                 </h1>
                 <img src={image} alt="Display Image" />
@@ -80,7 +81,7 @@ const AboutUs = () => {
                     </div>
 
                     {/* image */}
-                    <div className="w-[30%] md:w-full sm:w-full">
+                    <div className="w-[30%] md:w-full sm:w-full md:h-[470px]">
                         <img
                             src={womenImage}
                             alt="women image"
@@ -91,12 +92,7 @@ const AboutUs = () => {
 
                 {/* button */}
                 <div className="flex sm:flex-col sm:justify-center md:justify-center items-center gap-6 w-full">
-                    <Button
-                        content={"donate"}
-                        btnStyle={
-                            "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white"
-                        }
-                    />
+                    <DonateButton />
                     <Button
                         content={"get involved"}
                         btnStyle={
@@ -111,7 +107,7 @@ const AboutUs = () => {
                 id="team"
                 className="w-full pb-36 px-28 lg:px-16 sm:px-7 max-w-[1275px] space-y-7 scroll-mt-36"
             >
-                <h3 className="text-4xl font-bold text-center sm:text-[22px] md:text-[30px] lg:text-[40px] xl:text-[48px] 2xl:text-[48px]">
+                <h3 className="text-4xl font-bold text-center res-header-size">
                     The Hearts Behind The Mission
                 </h3>
                 {/* Team */}

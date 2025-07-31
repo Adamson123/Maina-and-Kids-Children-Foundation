@@ -36,23 +36,25 @@ const Objectives = () => {
     return (
         <div
             id="objectives"
-            className="flex justify-center flex-col sm:px-[16px] sm:py-[25px] md:p-[35px] lg:p-[60px] xl:p-[100px] 2xl:p-[100px] gap-[10px]"
+            className="flex justify-center flex-col  pt-24 sm:px-[16px]  md:px-[35px] lg:px-[60px] xl:px-[100px] 2xl:px-[100px] sm:gap-[30px] gap-[50px]"
         >
-            {/* subtitle */}
-            <p className="text-[#336699] sm:text-center md:text-center font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
-                What We Do
-            </p>
-            {/* bigger text */}
-            <h3 className="sm:text-[22px] md:text-[55px] sm:text-center md:text-center text-[56px] font-extrabold text-[#0F172A] sm:leading-[40px] leading-[70px]">
-                Giving Little Children Chances Through;
-            </h3>
-            {/* sub text only on mobile */}
-            <p className="hidden sm:block text-center text-[#0F172A] sm:text-[16px]">
-                Our organization caters to children and girls, we have programs
-                that are intended for them.
-            </p>
+            <div>
+                {/* subtitle */}
+                <p className="text-[#336699] sm:text-center md:text-center font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
+                    What We Do
+                </p>
+                {/* bigger text */}
+                <h3 className="sm:text-center md:text-center font-extrabold text-[#0F172A] res-header-size">
+                    Giving Little Children Chances Through;
+                </h3>
+                {/* sub text only on mobile */}
+                <p className="hidden sm:block text-center text-[#0F172A] sm:text-[16px]">
+                    Our organization caters to children and girls, we have
+                    programs that are intended for them.
+                </p>
+            </div>
             {/* grid box */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-2 gap-[95px] mt-[50px] sm:gap-[50px] 2xl:grid-cols-2">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-2 gap-[95px] sm:gap-[50px] 2xl:grid-cols-2">
                 {data.map((card) => {
                     return (
                         <div

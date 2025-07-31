@@ -8,18 +8,19 @@ const Team = () => {
     return (
         <div
             id="team"
-            className="flex justify-center items-center flex-col mb-[100px] lg:mb-[70px] xl:mb-[80px] 2xl:mb-[100px] sm:mb-12 md:mb-14"
+            className="flex justify-center items-center flex-col pt-24 sm:gap-[30px] gap-[50px]"
         >
-            <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
-                THE TEAM
-            </p>
+            <div className="text-center">
+                <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
+                    THE TEAM
+                </p>
 
-            <h3 className="sm:text-[22px] sm:text-center md:text-[55px] md:text-center text-[56px] font-extrabold text-[#0F172A]">
-                The Hearts Behind The Mission
-            </h3>
-
+                <h3 className="sm:text-center md:text-center font-extrabold text-[#0F172A] res-header-size">
+                    The Hearts Behind The Mission
+                </h3>
+            </div>
             {/* grid box */}
-            <div className="grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-2 grid-cols-3 grid-rows-2 md:gap-[40px] lg:gap-[50px] xl:gap-[54px] 2xl:gap-[60px] md:mt-[60px] lg:my-[70px] xl:my-[80px] 2xl:my-[100px] sm:my-10 md:mb-14 md:mx-3">
+            <div className="grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-2 grid-cols-3 grid-rows-2 md:gap-[40px] lg:gap-[50px] xl:gap-[54px] 2xl:gap-[60px]  md:mx-3">
                 {teamInHompage.map((person) => {
                     return (
                         <div

@@ -8,6 +8,7 @@ import Line from "/assets/Line 2.png";
 import Button from "../components/Button";
 import { girlChildProjects } from "../data/projects";
 import { useLocation } from "react-router-dom";
+import DonateButton from "../components/DonateButton";
 
 const GirlChild = () => {
     const location = useLocation();
@@ -33,7 +34,7 @@ const GirlChild = () => {
                     <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         GIRL CHILD
                     </h3>
-                    <h1 className="text-[56px] sm:text-[22px] sm:text-center font-extrabold text-[#0F172A]">
+                    <h1 className="res-header-size sm:text-center font-extrabold text-[#0F172A]">
                         Girl child Program
                     </h1>
                 </div>
@@ -65,7 +66,7 @@ const GirlChild = () => {
                     <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         PROBLEM
                     </h3>
-                    <h1 className="text-[56px] sm:text-3xl font-extrabold text-[#0F172A] text-center sm:text-[22px]">
+                    <h1 className="font-extrabold text-[#0F172A] text-center res-header-size">
                         A glimpse into the problem
                     </h1>
                 </div>
@@ -118,7 +119,7 @@ const GirlChild = () => {
                     <h3 className="text-[#336699] font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                         OUR OBJECTIVES{" "}
                     </h3>
-                    <h1 className="text-[56px] sm:text-[22px] text-center font-extrabold text-[#0F172A]">
+                    <h1 className="res-header-size text-center font-extrabold text-[#0F172A]">
                         How we are tackling the problem
                     </h1>
                 </div>
@@ -171,7 +172,7 @@ const GirlChild = () => {
             {/* Fourth Section */}
             <div className="px-[100px] sm:px-[30px] space-y-5 md:px-[40px]">
                 {/* Header */}
-                <h1 className="text-[56px] sm:text-[22px] text-center font-extrabold text-[#0F172A] ">
+                <h1 className="font-extrabold text-[#0F172A] res-header-size">
                     Projects
                 </h1>
                 <div className="flex gap-8 justify-center sm:flex-col md:text-base leading-8 md:leading-7">
@@ -227,17 +228,12 @@ const GirlChild = () => {
             </div>
 
             <div className="flex  sm:flex-col px-[100px] gap-6  sm:px-[50px] justify-center items-center my-20">
+                <DonateButton />
                 <Button
-                    content={"Donate"}
+                    content={"get involved"}
                     btnStyle={
-                        "bg-[#336699] sm:w-full text-white before:bg-[#0f172a] hover:border-white"
+                        "before:bg-[#0f172a] text-[#0f172a] hover:text-white border-[#326699]"
                     }
-                    linkStyle={"sm:w-full max-w-[300px]"}
-                />
-                <Button
-                    btnStyle={"sm:w-full "}
-                    linkStyle={"sm:w-full max-w-[300px]"}
-                    content={"Get Involved"}
                 />
             </div>
         </div>

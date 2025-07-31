@@ -7,7 +7,8 @@ const AboutUsText = () => {
                 <p className="text-[#336699]  font-semibold text-xl capitalize font-montserrat sm:text-[16px]">
                     About Us
                 </p>
-                <h3 className="leading-[70px] sm:leading-[40px] sm:text-[22px] text-[56px] font-extrabold text-[#0F172A]">
+                {/* sm:leading-[40px] leading-[70px]  */}
+                <h3 className="font-extrabold text-[#0F172A] res-header-size">
                     Maina And Kids Children Foundation
                 </h3>
             </div>
@@ -37,8 +38,9 @@ const AboutUsText = () => {
 const About = () => {
     return (
         <>
-            <div className="grid grid-cols-[42%_58%] gap-x-12 lg:p-[60px] xl:p-[100px] 2xl:py-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
-                <div className="full py-6 md:py-0 h-[calc(100%-20px)]">
+            {/* For Big screens (lg,xl,2xl) */}
+            <div className="grid grid-cols-[42%_58%] gap-x-12 pt-24 lg:px-[60px] xl:px-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
+                <div className="full py-5 h-[calc(100%-20px)]">
                     {/* Todo alt */}
                     <img
                         className="object-cover w-full h-full  rounded-md"
@@ -49,12 +51,12 @@ const About = () => {
                 {/* Text */}
                 <AboutUsText />
             </div>
-
-            <div className="grid grid-cols-1 gap-x-12 sm:px-[20px] sm:pt-[70px] sm:pb-[25px] md:pt-[90px] md:pb-[35px] items-center lg:hidden xl:hidden 2xl:hidden md:px-10 md:max--[920px]">
+            {/* For small and mid screens (sm,md) */}
+            <div className="grid grid-cols-1 gap-x-12  pt-24 sm:px-[20px] items-center lg:hidden xl:hidden 2xl:hidden md:px-10">
                 {/* Text */}
                 <AboutUsText />
 
-                <div className="full py-6">
+                <div className="full py-6 md:h-[470px]">
                     <img
                         className="object-cover w-full h-full rounded-md"
                         src={image1}
