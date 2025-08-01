@@ -5,7 +5,7 @@ import { base } from "./src/data/basename";
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react()],
-    base: base.basename,
+    base: "/",
     server: {
         port: 5100,
     },
