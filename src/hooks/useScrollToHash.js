@@ -7,16 +7,21 @@ const useScrollToHash = () => {
 
     useEffect(() => {
         const hash = location.hash.replace("#", "");
+        const onscrollEnd = () => {
+            // Remove hash from URL after scrolling
+            navigate(location.pathname, { replace: true });
+        };
+        window.addEventListener("scrollend", onscrollEnd);
         if (hash) {
             setTimeout(() => {
                 const el = document.getElementById(hash);
                 if (el) {
                     el.scrollIntoView({ behavior: "smooth", block: "start" });
-                    // Remove hash from URL after scrolling
-                    navigate(location.pathname, { replace: true });
                 }
             }, 0);
         }
+
+        return () => window.removeEventListener("scrollend", onscrollEnd);
     }, [location.hash, location.pathname, navigate]);
 };
 
