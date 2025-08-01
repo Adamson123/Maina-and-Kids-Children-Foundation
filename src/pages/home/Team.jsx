@@ -8,7 +8,7 @@ const Team = () => {
     return (
         <div
             id="team"
-            className="flex justify-center items-center flex-col sm:gap-[30px] gap-[50px]"
+            className="flex justify-center items-center flex-col sm:gap-[35px] gap-[55px]"
         >
             <div className="text-center">
                 <p className="font-bold sm:text-base text-xl uppercase tracking-widest text-[#336699] sm:text-[16px]">
