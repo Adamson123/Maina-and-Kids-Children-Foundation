@@ -55,12 +55,18 @@ const Navbar = () => {
 
     // use effect to conditionally control state for window
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const handleScroll = () => {
             window.scrollY > window.innerHeight - 100 //1000 //window.innerHeight / 2 - 130
                 ? setIsScrolled(true)
                 : setIsScrolled(false);
-        });
-    });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         // based on how far a user is in a page, the navbar changes
