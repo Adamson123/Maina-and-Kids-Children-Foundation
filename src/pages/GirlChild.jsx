@@ -1,9 +1,9 @@
-import Group from "/assets/Rectangle27.png";
-import Education from "/assets/Rectangle23.png";
-import Health from "/assets/Rectangle25.png";
-import Skill from "/assets/Rectangle26.png";
-import Confidence from "/assets/Rectangle24.png";
-import Line from "/assets/Line2.png";
+import Group from "/assets/Rectangle27.webp";
+import Education from "/assets/Rectangle23.webp";
+import Health from "/assets/Rectangle25.webp";
+import Skill from "/assets/Rectangle26.webp";
+import Confidence from "/assets/Rectangle24.webp";
+import Line from "/assets/Line2.webp";
 import Button from "../components/Button";
 import { girlChildProjects } from "../data/projects";
 import DonateButton from "../components/DonateButton";

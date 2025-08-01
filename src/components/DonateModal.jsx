@@ -1,30 +1,43 @@
-import { useDonateModal } from "../context/DonateModalContext";
-import GTBImage from "/assets/banks/GTB.webp";
-import UBAImage from "/assets/banks/UBA.webp";
-import AccessBankImage from "/assets/banks/Access.webp";
 import { BiX } from "react-icons/bi";
-
-const accountsDetails = [
-    {
-        name: "GTBANK",
-        image: GTBImage,
-        acctnumber: "8141941988",
-    },
-    {
-        name: "UBA",
-        image: UBAImage,
-        acctnumber: "8141941988",
-    },
-    {
-        name: "Access bank",
-        image: AccessBankImage,
-        acctnumber: "8141941988",
-    },
-];
+import { useDonateModal } from "../context/DonateModalContext";
+import UbaSvg from "/assets/banks/UBA.svg";
+import { PiCopySimple } from "react-icons/pi";
+import toast from "react-hot-toast";
 
 const DonateModal = () => {
     const { isOpen, closeModal } = useDonateModal();
 
+    const copyToClipboard = () => {
+        const accountDetails = "1025549744";
+        const msg = "Account details copied to clipboard!";
+        if (navigator.clipboard && window.isSecureContext) {
+            // Use the modern clipboard API
+            navigator.clipboard
+                .writeText(accountDetails)
+                .then(() => {
+                    toast.success(msg);
+                })
+                .catch((err) => {
+                    console.error("Failed to copy: ", err);
+                });
+        } else {
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = accountDetails;
+            textArea.style.position = "fixed"; // Avoid scrolling to bottom
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand("copy");
+                toast.success(msg);
+            } catch (err) {
+                console.error("Failed to copy: ", err);
+            }
+            document.body.removeChild(textArea);
+        }
+    };
     return (
         <div
             onClick={closeModal}
@@ -33,47 +46,59 @@ const DonateModal = () => {
                     ? "opacity-1 pointer-events-auto"
                     : "opacity-0 pointer-events-none"
             }`}
+            role="dialog"
+            aria-modal="true"
         >
             <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative bg-primary-blue pt-14 pb-7 px-20 sm:px-5 flex flex-col gap-[35px] text-white max-w-[800px]"
+                className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
             >
-                {/* Close button to close the modal */}
+                {/* Close Modal button */}
+
                 <button
                     onClick={closeModal}
-                    className="rounded-full absolute text-center text-white right-5 top-5 sm:top-4 border-2 hover:bg-white/40"
+                    className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
+                    aria-label="Close dialog"
                 >
-                    <BiX className="h-5 w-5" />
+                    <BiX className="h-4 w-4" />
                 </button>
-                {/*accounts details */}
-                <div className="flex gap-x-10 sm:gap-x-5 items-center">
-                    {accountsDetails.map((bank) => (
-                        <div
-                            key={bank.name}
-                            className="flex flex-col items-center gap-y-[4.5px]"
-                        >
-                            <img
-                                src={bank.image}
-                                alt={bank.name}
-                                className="object-contain h-full sm:max-h-[87px]"
-                            />
-
-                            <h3 className="sm:text-sm">{bank.name}</h3>
-                            <p className="text-xs sm:text-[11px]">
-                                {bank.acctnumber}
-                            </p>
-                        </div>
-                    ))}
+                {/* Circle */}
+                <div className="mb-6 flex justify-center absolute p-1 left-44 -top-10 bg-white rounded-full w-24 h-24">
+                    <div className="flex items-center justify-center border-black p-1 overflow-hidden rounded-full border-4">
+                        <img src={UbaSvg} alt="UBA logo" />
+                    </div>
                 </div>
                 {/* Encouragement */}
-                <p className="text-center sm:text-sm">
-                    Your Donations will help impact the lives of <br /> thousand
-                    kids out there.
-                    <br />
-                    Make an impact today!
+                <h2 className="mb-4 text-center text-2xl font-semibold mt-8">
+                    Make a Difference Today
+                </h2>
+                <p className="mb-6 text-center text-gray-600 text-xl">
+                    Your generosity helps us empower and build. Every
+                    contribution brings us closer to a brighter future.
+                </p>
+                {/* Details */}
+                <div className="mb-4 text-center flex flex-col justify-center items-center">
+                    <p className="text-xl font-mono font-extrabold">
+                        1025549744
+                    </p>
+
+                    <PiCopySimple
+                        tabIndex={0}
+                        onClick={copyToClipboard}
+                        className="lucide lucide-copy cursor-pointer h-7 w-7"
+                    />
+                </div>
+
+                <p className="mb-6 text-center text-gray-600 text-xl">
+                    Maina &amp; Kids Children Foundation
+                </p>
+                {/*  */}
+                <p className="text-center text-sm text-gray-500 text-md">
+                    Thank you for supporting our cause!
                 </p>
             </div>
         </div>
     );
 };
+
 export default DonateModal;
