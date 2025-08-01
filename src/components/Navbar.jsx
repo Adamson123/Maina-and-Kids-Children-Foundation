@@ -75,7 +75,7 @@ const Navbar = () => {
                 isScrolled || location.pathname !== "/"
                     ? "bg-white"
                     : "bg-transparent"
-            } transition-all duration-300 h-[82px] flex justify-between items-center sm:px-[20px] md:px-[30px] lg:px-[30px] xl:px-[100px] 2xl:px-[100px] fixed top-0 z-[80] w-full sm:pr-1`}
+            } transition-all duration-300 h-[82px] sm:h-[77px] flex justify-between items-center sm:px-[20px] md:px-[30px] lg:px-[30px] xl:px-[100px] 2xl:px-[100px] fixed top-0 z-[80] w-full sm:pr-1`}
         >
             {/* image */}
             <div onClick={() => navigate("/")} className="cursor-pointer">
