@@ -8,6 +8,7 @@ import {
 import "@fontsource/kumbh-sans";
 import Root from "./layout/Root";
 import { BiLoaderAlt } from "react-icons/bi";
+import { base } from "./data/basename";
 
 // Lazy load pages
 const Homepage = lazy(() => import("./pages/Homepage"));
@@ -60,7 +61,7 @@ const router = createBrowserRouter(
             />
         </Route>
     ),
-    { basename: "/Maina-and-Kids-Children-Foundation" }
+    { basename: base.basename }
 );
 
 const App = () => {

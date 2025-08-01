@@ -1,8 +1,11 @@
+import { base } from "./basename";
+
 /*    const pathname = location.pathname.endsWith("/")
 ? location.pathname.slice(0, -1)
 : location.pathname;*/
+
 const getImagePath = (name) => {
-    return `/Maina-and-Kids-Children-Foundation/assets/team/${name}.webp`;
+    return `${base.basename}/assets/team/${name}.webp`;
 };
 
 export const threeSpeakers1 = [

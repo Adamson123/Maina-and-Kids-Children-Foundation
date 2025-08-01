@@ -1,5 +1,7 @@
+import { base } from "./basename";
+
 const getGirlChildProjectsImgPath = (name) => {
-    return `/Maina-and-Kids-Children-Foundation/assets/girl-child-projects/${name}.webp`;
+    return `${base.basename}/assets/girl-child-projects/${name}.webp`;
 };
 
 export const girlChildProjects = [
@@ -48,7 +50,7 @@ export const NavbarProjects = [
 ];
 
 const getProjectsImgPath = (name) => {
-    return `/Maina-and-Kids-Children-Foundation/assets/projects/${name}.webp`;
+    return `${base.basename}/assets/projects/${name}.webp`;
 };
 
 export const safenetProgram = {

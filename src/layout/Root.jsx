@@ -9,12 +9,13 @@ import DonateModal from "../components/DonateModal";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
-    const { pathname, hash } = useLocation();
+    const { pathname } = useLocation();
     useEffect(() => {
-        if (!hash) {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    }, [pathname, hash]);
+        // Use setTimeout to ensure scroll happens after all content is rendered
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "auto" });
+        }, 0);
+    }, [pathname]);
     return null;
 };
 
