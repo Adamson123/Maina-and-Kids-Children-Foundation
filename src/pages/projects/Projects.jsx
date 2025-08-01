@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import {
     almajiriInTech,
     childCareStories,
@@ -6,24 +5,13 @@ import {
     safenetProgram,
 } from "../../data/projects";
 import { ProjectCard, ProjectChildCareCard } from "./ProjectCard";
-import { useEffect } from "react";
+
 import Button from "../../components/Button";
 import DonateButton from "../../components/DonateButton";
+import useScrollToHash from "../../hooks/useScrollToHash";
 
 const Projects = () => {
-    const location = useLocation();
-
-    useEffect(() => {
-        const hash = location.hash.replace("#", "");
-
-        if (hash) {
-            setTimeout(() => {
-                const el = document.getElementById(hash);
-                if (el)
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 0);
-        }
-    }, [location.hash]);
+    useScrollToHash();
 
     return (
         <div className="pt-40 flex flex-col gap-32 pb-32 w-full">

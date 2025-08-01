@@ -7,29 +7,17 @@ import {
     threeSpeakers3,
     twoSpeakers,
 } from "../../data/team";
-import { useLocation } from "react-router-dom";
 import { MultiProfileContainer, ProfileCard } from "./Profile";
 import womenImage from "/assets/women.webp";
 import DonateButton from "../../components/DonateButton";
 import videoPoster from "/assets/video-poster/Maina-poster.webp";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
+import useScrollToHash from "../../hooks/useScrollToHash";
 
 const AboutUs = () => {
-    const location = useLocation();
+    useScrollToHash();
     const videoRef = useRef(null);
     const [isPlayedVideo, setIsPlayedVideo] = useState(false);
-
-    useEffect(() => {
-        const hash = location.hash.replace("#", "");
-
-        if (hash) {
-            setTimeout(() => {
-                const el = document.getElementById(hash);
-                if (el)
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 0);
-        }
-    }, [location.hash]);
 
     const playVideo = () => {
         videoRef.current.play();

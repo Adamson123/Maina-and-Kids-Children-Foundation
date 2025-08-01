@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Group from "/assets/Rectangle27.png";
 import Education from "/assets/Rectangle23.png";
 import Health from "/assets/Rectangle25.png";
@@ -7,23 +6,11 @@ import Confidence from "/assets/Rectangle24.png";
 import Line from "/assets/Line2.png";
 import Button from "../components/Button";
 import { girlChildProjects } from "../data/projects";
-import { useLocation } from "react-router-dom";
 import DonateButton from "../components/DonateButton";
+import useScrollToHash from "../hooks/useScrollToHash";
 
 const GirlChild = () => {
-    const location = useLocation();
-
-    useEffect(() => {
-        const hash = location.hash.replace("#", "");
-
-        if (hash) {
-            setTimeout(() => {
-                const el = document.getElementById(hash);
-                if (el)
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 0);
-        }
-    }, [location.hash]);
+    useScrollToHash();
 
     return (
         <div className="pt-20">
