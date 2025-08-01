@@ -31,7 +31,7 @@ const Stories = () => {
 
     //sm:py-12
     return (
-        <div className="flex flex-col items-center justify-center text-center sm:px-[20px] md:px-[25px] lg:px-[50px] xl:px-[90px] 2xl:px-[130px] sm:gap-[30px] gap-[50px]  pt-24">
+        <div className="flex flex-col items-center justify-center text-center sm:px-[20px] md:px-[25px] lg:px-[50px] xl:px-[90px] 2xl:px-[130px] sm:gap-[30px] gap-[50px]">
             {/* Heading */}
             {/* TODO: Horizontal gap */}
             <div>

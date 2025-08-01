@@ -37,7 +37,7 @@ const Portfolio = () => {
     return (
         <div
             id="portfolio"
-            className="flex flex-col items-center pt-24 w-full sm:gap-[30px] gap-[50px]"
+            className="flex flex-col items-center w-full sm:gap-[30px] gap-[50px]"
         >
             <div className="text-center">
                 {/* subtitle */}

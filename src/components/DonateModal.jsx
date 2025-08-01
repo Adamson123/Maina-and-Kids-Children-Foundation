@@ -1,9 +1,7 @@
 import { useDonateModal } from "../context/DonateModalContext";
-import GTBImage from "/assets/GTB.png";
-import UBAImage from "/assets/UBA.png";
-import AccessBankImage from "/assets/Access.png";
-import { TbCircleX } from "react-icons/tb";
-import { CgClose } from "react-icons/cg";
+import GTBImage from "/assets/banks/GTB.webp";
+import UBAImage from "/assets/banks/UBA.webp";
+import AccessBankImage from "/assets/banks/Access.webp";
 import { BiX } from "react-icons/bi";
 
 const accountsDetails = [

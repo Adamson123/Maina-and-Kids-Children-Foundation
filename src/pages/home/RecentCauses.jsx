@@ -23,7 +23,7 @@ const RecentCauses = () => {
     return (
         <div
             id="recentCauses"
-            className="flex justify-center items-center flex-col sm:gap-[30px] gap-[50px] pt-24 sm:px-[20px] md:px-[35px] lg:px-[60px] xl:px-[100px] 2xl:px-[100px]"
+            className="flex justify-center items-center flex-col sm:gap-[30px] gap-[50px] sm:px-[20px] md:px-[35px] lg:px-[60px] xl:px-[100px] 2xl:px-[200px]"
         >
             <div className="text-center">
                 {/* subtitle */}
@@ -36,7 +36,7 @@ const RecentCauses = () => {
                 </h3>
             </div>
             {/* grid box */}
-            <div className="grid sm:grid-cols-1 grid-cols-2 sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
+            <div className="grid sm:grid-cols-1 grid-cols-2 min-w-full sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
                 {recentActivities.map((project, i) => {
                     return (
                         <div
@@ -46,7 +46,7 @@ const RecentCauses = () => {
                             <img
                                 src={`${project.img}`}
                                 alt={`${project.title} Image`}
-                                className="w-[530px] h-[282px] object-cover rounded-md"
+                                className="h-[330px] sm:h-[250px] md:h-[250px] w-full max-w-[650px] sm:max-w-[500px] object-cover rounded-md"
                             />
                             <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[20px]">
                                 {project.title}

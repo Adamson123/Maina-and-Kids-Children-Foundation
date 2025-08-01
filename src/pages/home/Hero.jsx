@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="bg-[url('/assets/hero_bg.webp')] h-screen bg-no-repeat bg-cover flex pl-[75px]  sm:p-3 sm:items-center sm:justify-center">
             <div className="flex justify-center items-start flex-col py-[100px] sm:items-center">
                 {/* title */}
-                <h1 className="text-white uppercase sm:text-[25px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-left font-moul flex flex-col font-normal max-w-[1070px] 2xl:!leading-[127px] xl:!leading-[100px] lg:!leading-[70px] md:!leading-[60px] sm:text-center sm:px-3">
-                    help a child and be our hero
+                <h1 className="text-white uppercase sm:text-[28px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl text-left font-moul flex flex-col font-normal 2xl:!leading-[95px] xl:!leading-[95px] lg:!leading-[70px] md:!leading-[60px] sm:text-center sm:px-3">
+                    help a child <br className="" /> and be our hero
                 </h1>
                 {/* subtitle */}
                 <p className="sm:text-[13px] text-[22px] font-semibold text-center text-white  tracking-wide">

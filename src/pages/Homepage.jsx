@@ -11,17 +11,19 @@ import Stories from "./home/Stories";
 
 const Homepage = () => {
     return (
-        <div>
-            <Hero />
-            <AboutUs />
-            <Objectives />
-            {/* <DedicatedService/> */}
-            <RecentCauses />
-            <Stories />
-            <Portfolio />
-            <Team />
+        <>
+            <div className="flex flex-col gap-32 sm:gap-24 md:gap-28">
+                <Hero />
+                <AboutUs />
+                <Objectives />
+                {/* <DedicatedService/> */}
+                <RecentCauses />
+                <Stories />
+                <Portfolio />
+                <Team />
+            </div>
             <Statistics />
-        </div>
+        </>
     );
 };
 

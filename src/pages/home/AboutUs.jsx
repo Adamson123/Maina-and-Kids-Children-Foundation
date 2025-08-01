@@ -39,7 +39,7 @@ const About = () => {
     return (
         <>
             {/* For Big screens (lg,xl,2xl) */}
-            <div className="grid grid-cols-[42%_58%] gap-x-12 pt-24 lg:px-[60px] xl:px-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
+            <div className="grid grid-cols-[42%_58%] gap-x-12 lg:px-[60px] xl:px-[100px] 2xl:px-[200px] items-center md:hidden sm:hidden">
                 <div className="full py-5 h-[calc(100%-20px)]">
                     {/* Todo alt */}
                     <img
@@ -52,7 +52,7 @@ const About = () => {
                 <AboutUsText />
             </div>
             {/* For small and mid screens (sm,md) */}
-            <div className="grid grid-cols-1 gap-x-12  pt-24 sm:px-[20px] items-center lg:hidden xl:hidden 2xl:hidden md:px-10">
+            <div className="grid grid-cols-1 gap-x-12 sm:px-[20px] items-center lg:hidden xl:hidden 2xl:hidden md:px-10">
                 {/* Text */}
                 <AboutUsText />
 

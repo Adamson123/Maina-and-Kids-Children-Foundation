@@ -36,7 +36,7 @@ const Objectives = () => {
     return (
         <div
             id="objectives"
-            className="flex justify-center flex-col  pt-24 sm:px-[16px]  md:px-[35px] lg:px-[60px] xl:px-[100px] 2xl:px-[100px] sm:gap-[30px] gap-[50px]"
+            className="flex justify-center flex-col sm:px-[16px]  md:px-[35px] sm:gap-[30px] gap-[50px] lg:px-[60px] xl:px-[100px] 2xl:px-[200px]"
         >
             <div>
                 {/* subtitle */}

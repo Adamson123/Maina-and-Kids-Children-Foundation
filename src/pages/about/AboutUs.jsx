@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import image from "/assets/about-us-img.png";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../../components/Button";
 import {
     founder,
@@ -12,9 +11,13 @@ import { useLocation } from "react-router-dom";
 import { MultiProfileContainer, ProfileCard } from "./Profile";
 import womenImage from "/assets/women.webp";
 import DonateButton from "../../components/DonateButton";
+import videoPoster from "/assets/video-poster/Maina-poster.webp";
+import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 
 const AboutUs = () => {
     const location = useLocation();
+    const videoRef = useRef(null);
+    const [isPlayedVideo, setIsPlayedVideo] = useState(false);
 
     useEffect(() => {
         const hash = location.hash.replace("#", "");
@@ -28,25 +31,53 @@ const AboutUs = () => {
         }
     }, [location.hash]);
 
-    /**
-     md:py-[80px] lg:py-[100px] xl:py-[100px] 2xl:py-[100px] s:px-[20px] sm:px-[25px] md:px-[40px] lg:px-[60px] xl:px-[70px] flex flex-col items-center gap-y-[64px]
-     */
+    const playVideo = () => {
+        videoRef.current.play();
+        if (isPlayedVideo) return;
+        setIsPlayedVideo(true);
+    };
+
     return (
-        <div className="flex flex-col justify-center gap-32 px-16 sm:px-3 items-center text-[#453838] pt-40">
-            {/* hero section */}
-            <div className="space-y-8">
+        <div className="flex flex-col justify-center gap-32 sm:gap-16 px-16 sm:px-2 items-center text-[#453838] pt-40">
+            <div className="flex flex-col gap-8">
                 {/* head */}
                 <h1 className="text-[#336699] uppercase font-bold res-header-size text-center">
                     maina and kids children foundation
                 </h1>
-                <img src={image} alt="Display Image" />
+                {/* Video */}
+                <div className="relative">
+                    <button
+                        onClick={playVideo}
+                        className={`p-1 flex items-center justify-center rounded-full bg-white absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 cursor-pointer z-20  transition-all duration-1000  ${
+                            isPlayedVideo
+                                ? "opacity-0 pointer-events-none"
+                                : "opacity-1 pointer-events-auto"
+                        }`}
+                    >
+                        {isPlayedVideo ? (
+                            <BsPauseFill className="h-12 w-12 fill-primary-blue" />
+                        ) : (
+                            <BsPlayFill className="h-12 w-12 fill-primary-blue translate-x-[2px]" />
+                        )}
+                    </button>
+                    <video
+                        ref={videoRef}
+                        src={
+                            "https://res.cloudinary.com/dzoxxivy4/video/upload/v1754045371/Maina-_-Kids-Outreach_ulqeji.webm"
+                        }
+                        alt="Display Image"
+                        controls={isPlayedVideo}
+                        className="w-full object-cover min-h-[320px] rounded-md"
+                        poster={videoPoster}
+                    />
+                </div>
             </div>
             {/* Write up */}
             <div className="flex flex-col items-start gap-10 max-w-[1300px]">
                 {/* grid grid-cols-[60%_40%] md:grid-cols-1 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-2 */}
-                <div className="gap-7 sm:px-4 flex md:flex-col md:items-center sm:flex-col sm:items-center">
+                <div className="gap-7 sm:px-4 flex md:flex-col sm:flex-col">
                     {/* text */}
-                    <div className="flex flex-col gap-[40px] w-[70%] md:w-full sm:w-full text-[18px] sm:text-[15px] sm:text-center md:text-center">
+                    <div className="flex flex-col gap-[40px] w-[70%] md:w-full sm:w-full text-[18px] sm:text-[15px]">
                         <p className="tracking-wide leading-9">
                             Maina & Kids children foundation is a
                             Non-governmental, Non-profit Organization, with
