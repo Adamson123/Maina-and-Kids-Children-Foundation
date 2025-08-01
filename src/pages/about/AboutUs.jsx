@@ -33,7 +33,7 @@ const AboutUs = () => {
                     maina and kids children foundation
                 </h1>
                 {/* Video */}
-                <div className="relative">
+                <div className="relative max-w-[1350px]">
                     <button
                         onClick={playVideo}
                         className={`p-1 flex items-center justify-center rounded-full bg-white absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 cursor-pointer z-20  transition-all duration-1000  ${
@@ -124,7 +124,7 @@ const AboutUs = () => {
             {/* Team */}
             <div
                 id="team"
-                className="w-full pb-36 px-28 lg:px-16 sm:px-7 max-w-[1275px] space-y-7 scroll-mt-36"
+                className="w-full pb-36 px-28 lg:px-16 sm:px-7 max-w-[1275px] space-y-7 scroll-mt-36 sm:scroll-mt-20"
             >
                 <h3 className="text-4xl font-bold text-center res-header-size">
                     The Hearts Behind The Mission

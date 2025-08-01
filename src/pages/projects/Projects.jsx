@@ -18,7 +18,10 @@ const Projects = () => {
             <ProjectCard project={safenetProgram} />
             <ProjectCard project={almajiriInTech} />
             <ProjectCard project={mainaKidsFoundation} />
-            <div id="child-care" className="flex flex-col scroll-mt-36">
+            <div
+                id="child-care"
+                className="flex flex-col scroll-mt-36 sm:scroll-mt-20"
+            >
                 <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1070px] self-center res-header-size">
                     Child Care
                 </h2>

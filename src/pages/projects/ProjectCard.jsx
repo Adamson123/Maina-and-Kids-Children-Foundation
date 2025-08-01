@@ -5,7 +5,10 @@ export const ProjectCard = ({ project }) => {
     const firstContent = project.contents[0];
     const secondContent = project.contents[1];
     return (
-        <div id={project.id} className="flex flex-col scroll-mt-36">
+        <div
+            id={project.id}
+            className="flex flex-col scroll-mt-36 sm:scroll-mt-20"
+        >
             <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1070px] self-center res-header-size">
                 {project.title}
             </h2>
