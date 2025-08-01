@@ -36,17 +36,17 @@ const DonateModal = () => {
         >
             <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative bg-primary-blue pt-12 pb-7 px-20 sm:px-10 flex flex-col gap-[35px] text-white max-w-[800px]"
+                className="relative bg-primary-blue pt-14 pb-7 px-20 sm:px-5 flex flex-col gap-[35px] text-white max-w-[800px]"
             >
                 {/* Close button to close the modal */}
                 <button
                     onClick={closeModal}
-                    className="rounded-full absolute text-center text-white right-5 top-5 border-2 hover:bg-white/40"
+                    className="rounded-full absolute text-center text-white right-5 top-5 sm:top-4 border-2 hover:bg-white/40"
                 >
                     <BiX className="h-5 w-5" />
                 </button>
                 {/*accounts details */}
-                <div className="flex gap-x-10 sm:gap-x-5">
+                <div className="flex gap-x-10 sm:gap-x-5 items-center">
                     {accountsDetails.map((bank) => (
                         <div
                             key={bank.name}
@@ -55,7 +55,7 @@ const DonateModal = () => {
                             <img
                                 src={bank.image}
                                 alt={bank.name}
-                                className="object-contain h-full"
+                                className="object-contain h-full sm:max-h-[87px]"
                             />
 
                             <h3 className="sm:text-sm">{bank.name}</h3>
