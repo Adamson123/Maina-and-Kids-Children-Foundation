@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Group from "/assets/Rectangle 27.png";
-import Education from "/assets/Rectangle 23.png";
-import Health from "/assets/Rectangle 25.png";
-import Skill from "/assets/Rectangle 26.png";
-import Confidence from "/assets/Rectangle 24.png";
-import Line from "/assets/Line 2.png";
+import Group from "/assets/Rectangle27.png";
+import Education from "/assets/Rectangle23.png";
+import Health from "/assets/Rectangle25.png";
+import Skill from "/assets/Rectangle26.png";
+import Confidence from "/assets/Rectangle24.png";
+import Line from "/assets/Line2.png";
 import Button from "../components/Button";
 import { girlChildProjects } from "../data/projects";
 import { useLocation } from "react-router-dom";

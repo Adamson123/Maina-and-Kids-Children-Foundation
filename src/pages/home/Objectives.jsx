@@ -1,9 +1,9 @@
 import React from "react";
 // import icon images
 import icon1 from "/assets/Icon.png";
-import icon2 from "/assets/Icon (1).png";
-import icon3 from "/assets/Icon (2).png";
-import icon4 from "/assets/Icon (3).png";
+import icon2 from "/assets/Icon(1).png";
+import icon3 from "/assets/Icon(2).png";
+import icon4 from "/assets/Icon(3).png";
 
 const Objectives = () => {
     const data = [

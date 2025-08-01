@@ -1,3 +1,6 @@
+/*    const pathname = location.pathname.endsWith("/")
+? location.pathname.slice(0, -1)
+: location.pathname;*/
 const getImagePath = (name) => {
     return `/Maina-and-Kids-Children-Foundation/assets/team/${name}.webp`;
 };
