@@ -54,7 +54,6 @@ const DonateModal = () => {
                 className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-lg"
             >
                 {/* Close Modal button */}
-
                 <button
                     onClick={closeModal}
                     className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
@@ -63,7 +62,7 @@ const DonateModal = () => {
                     <BiX className="h-4 w-4" />
                 </button>
                 {/* Circle */}
-                <div className="mb-6 flex justify-center absolute p-1 left-44 -top-10 bg-white rounded-full w-24 h-24">
+                <div className="mb-6 flex justify-center absolute p-1 left-1/2 transform -translate-x-1/2 -top-10 bg-white rounded-full w-24 h-24">
                     <div className="flex items-center justify-center border-black p-1 overflow-hidden rounded-full border-4">
                         <img src={UbaSvg} alt="UBA logo" />
                     </div>
@@ -88,7 +87,6 @@ const DonateModal = () => {
                         className="lucide lucide-copy cursor-pointer h-7 w-7"
                     />
                 </div>
-
                 <p className="mb-6 text-center text-gray-600 text-xl">
                     Maina &amp; Kids Children Foundation
                 </p>
