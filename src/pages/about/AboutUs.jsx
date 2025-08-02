@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../../components/Button";
 import {
     founder,
@@ -13,6 +13,7 @@ import DonateButton from "../../components/DonateButton";
 import videoPoster from "/assets/video-poster/Maina-poster.webp";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import useScrollToHash from "../../hooks/useScrollToHash";
+import GetInvolvedButton from "../../components/GetInvolvedButton";
 
 const AboutUs = () => {
     useScrollToHash();
@@ -110,14 +111,9 @@ const AboutUs = () => {
                 </div>
 
                 {/* button */}
-                <div className="flex sm:flex-col sm:justify-center md:justify-center items-center gap-6 w-full">
+                <div className="flex sm:flex-col sm:justify-center md:justify-center items-center gap-6 sm:gap-4 w-full">
                     <DonateButton />
-                    <Button
-                        content={"get involved"}
-                        btnStyle={
-                            "text-[#453838] before:bg-[#0f172a] hover:text-white hover:border-white"
-                        }
-                    />
+                    <GetInvolvedButton />
                 </div>
             </div>
 

@@ -8,7 +8,7 @@ const DonateButton = ({ btnStyle, linkStyle }) => {
             onclick={openModal}
             content={"Donate"}
             btnStyle={`bg-[#336699] text-white before:bg-[#0f172a] border-none ${btnStyle}`}
-            linkStyle={`sm:w-full max-w-[300px] ${linkStyle}`}
+            linkStyle={`${linkStyle}`}
         />
     );
 };

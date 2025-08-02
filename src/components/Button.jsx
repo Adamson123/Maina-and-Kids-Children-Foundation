@@ -6,7 +6,7 @@ const Btn = ({ btnStyle, content, onclick = () => {} }) => {
     return (
         <button
             onClick={onclick}
-            className={`w-[256px] h-[56px] rounded-[8px] border border-[#336699] capitalize p-[16px] ${btnStyle} flex items-center justify-center gap-4 z-[1] relative outline-none overflow-hidden transition-all duration-300 ease-in-out hover-on-button`}
+            className={`h-[56px] w-[256px] rounded-[8px] border border-[#336699] capitalize p-[16px] ${btnStyle} flex items-center justify-center gap-4 z-[1] relative outline-none overflow-hidden transition-all duration-300 ease-in-out hover-on-button`}
         >
             {content}
             <FaArrowRight />
@@ -17,9 +17,9 @@ const Btn = ({ btnStyle, content, onclick = () => {} }) => {
 const Button = ({ content, link, linkStyle, btnStyle, onclick }) => {
     if (link) {
         return (
-            <Link to={link} className={linkStyle}>
+            <a href={link} className={"w-[256px] " + linkStyle}>
                 <Btn btnStyle={btnStyle} content={content} />
-            </Link>
+            </a>
         );
     }
     return <Btn btnStyle={btnStyle} content={content} onclick={onclick} />;

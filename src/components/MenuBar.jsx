@@ -6,6 +6,7 @@ import { NavbarProjects } from "../data/projects";
 import { BiMailSend, BiPhone } from "react-icons/bi";
 import { contact } from "../data/contact";
 import DonateButton from "./DonateButton";
+import GetInvolvedButton from "./GetInvolvedButton";
 
 const MenuBar = () => {
     const navigate = useNavigate();
@@ -81,14 +82,17 @@ const MenuBar = () => {
                                 </li>
                             </ul>
                             {/* buttons */}
-                            <div className="flex flex-col w-full items-center gap-6 my-10 px-5">
+                            <div className="flex flex-col w-full items-center gap-y-4 my-10 px-5">
                                 <DonateButton btnStyle={"w-full"} />
-                                <Button
+                                {/* <Button
                                     content={"get involved"}
                                     btnStyle={
                                         "text-[#453838] before:bg-[#0f172a] hover:text-white hover:border-white w-full"
                                     }
                                     linkStyle={"w-full"}
+                                /> */}
+                                <GetInvolvedButton
+                                    linkStyle={"w-full max-w-full"}
                                 />
                             </div>
                         </div>

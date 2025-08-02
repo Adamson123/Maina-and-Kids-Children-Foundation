@@ -8,6 +8,7 @@ import Button from "../components/Button";
 import { girlChildProjects } from "../data/projects";
 import DonateButton from "../components/DonateButton";
 import useScrollToHash from "../hooks/useScrollToHash";
+import GetInvolvedButton from "../components/GetInvolvedButton";
 
 const GirlChild = () => {
     useScrollToHash();
@@ -214,14 +215,9 @@ const GirlChild = () => {
                 </div>
             </div>
 
-            <div className="flex  sm:flex-col px-[100px] gap-6  sm:px-[50px] justify-center items-center my-20">
+            <div className="flex  sm:flex-col px-[100px] gap-6  sm:gap-4 sm:px-[50px] justify-center items-center my-20">
                 <DonateButton />
-                <Button
-                    content={"get involved"}
-                    btnStyle={
-                        "before:bg-[#0f172a] text-[#0f172a] hover:text-white border-[#326699]"
-                    }
-                />
+                <GetInvolvedButton />
             </div>
         </div>
     );

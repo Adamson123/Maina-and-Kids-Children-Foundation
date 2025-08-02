@@ -9,6 +9,7 @@ import { ProjectCard, ProjectChildCareCard } from "./ProjectCard";
 import Button from "../../components/Button";
 import DonateButton from "../../components/DonateButton";
 import useScrollToHash from "../../hooks/useScrollToHash";
+import GetInvolvedButton from "../../components/GetInvolvedButton";
 
 const Projects = () => {
     useScrollToHash();
@@ -30,14 +31,9 @@ const Projects = () => {
                         <ProjectChildCareCard key={i} childCareStory={story} />
                     ))}
                 </div>
-                <div className="flex items-center justify-center mt-6 gap-6 sm:flex-col sm:gap-y-4">
+                <div className="flex items-center justify-center mt-6 sm:flex-col gap-6 sm:gap-4">
                     <DonateButton />
-                    <Button
-                        content={"get involved"}
-                        btnStyle={
-                            "before:bg-[#0f172a] text-[#0f172a] hover:text-white border-[#326699]"
-                        }
-                    />{" "}
+                    <GetInvolvedButton />
                 </div>
             </div>
         </div>
