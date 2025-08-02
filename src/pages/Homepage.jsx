@@ -7,6 +7,7 @@ import Team from "./home/Team";
 import Statistics from "./home/Statistics";
 import AboutUs from "./home/AboutUs";
 import Stories from "./home/Stories";
+import FadeInElement from "../components/FadeInElement";
 // import DedicatedService from './home/DedicatedService'
 
 const Homepage = () => {
@@ -14,11 +15,17 @@ const Homepage = () => {
         <>
             <div className="flex flex-col gap-32 sm:gap-24 md:gap-28">
                 <Hero />
-                <AboutUs />
+                <FadeInElement>
+                    <AboutUs />
+                </FadeInElement>
                 <Objectives />
                 {/* <DedicatedService/> */}
-                <RecentCauses />
-                <Stories />
+                <FadeInElement>
+                    <RecentCauses />
+                </FadeInElement>
+                <FadeInElement>
+                    <Stories />
+                </FadeInElement>
                 <Portfolio />
                 <Team />
             </div>
