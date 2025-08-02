@@ -20,12 +20,11 @@ const Homepage = () => {
                 </FadeInElement>
                 <Objectives />
                 {/* <DedicatedService/> */}
-                <FadeInElement>
-                    <RecentCauses />
-                </FadeInElement>
-                <FadeInElement>
-                    <Stories />
-                </FadeInElement>
+
+                <RecentCauses />
+
+                <Stories />
+
                 <Portfolio />
                 <Team />
             </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import stories from "../../data/stories";
 import { CgClose } from "react-icons/cg";
+import FadeInElement from "../../components/FadeInElement";
 
 const StoryCard = ({ story, setCurrentStory }) => {
     return (
@@ -46,21 +47,25 @@ const Stories = () => {
             <div className="grid gap-[40px] xl:grid-cols-3 xl:grid-rows-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1  2xl:grid-cols-3 2xl:grid-rows-1 sm:grid-cols-1 sm:grid-rows-3 sm:place-items-center 2xl:items-start">
                 {stories.map((story, i) =>
                     i < stories.length - 1 ? (
-                        <StoryCard
-                            key={i}
-                            story={story}
-                            setCurrentStory={setCurrentStory}
-                        />
-                    ) : (
-                        <div
-                            key={i}
-                            className="md:col-span-2 sm:col-span-1 flex items-center justify-center"
-                        >
+                        <FadeInElement>
                             <StoryCard
+                                key={i}
                                 story={story}
                                 setCurrentStory={setCurrentStory}
                             />
-                        </div>
+                        </FadeInElement>
+                    ) : (
+                        <FadeInElement>
+                            <div
+                                key={i}
+                                className="md:col-span-2 sm:col-span-1 flex items-center justify-center"
+                            >
+                                <StoryCard
+                                    story={story}
+                                    setCurrentStory={setCurrentStory}
+                                />
+                            </div>
+                        </FadeInElement>
                     )
                 )}
             </div>

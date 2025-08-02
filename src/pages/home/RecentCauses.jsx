@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import FadeInElement from "../../components/FadeInElement";
 // import data
 //import { projects } from "../../data/projects";
 import image1 from "/assets/girl-child-projects/hygiene.webp";
@@ -39,31 +40,33 @@ const RecentCauses = () => {
             <div className="grid sm:grid-cols-1 grid-cols-2 min-w-full sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
                 {recentActivities.map((project, i) => {
                     return (
-                        <div
-                            className="flex flex-col sm:items-center sm:text-center"
-                            key={i}
-                        >
-                            <img
-                                src={`${project.img}`}
-                                alt={`${project.title} Image`}
-                                className="h-[330px] sm:h-[250px] md:h-[250px] w-full max-w-[650px] sm:max-w-[500px] object-cover rounded-md"
-                            />
-                            <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[20px]">
-                                {project.title}
-                            </h3>
-                            <p className="text-[18px] mb-[13px] sm:text-[16px]">
-                                {project.content}
-                            </p>
-                            <div className="sm:flex sm:justify-center">
-                                <Button
-                                    link={project.link}
-                                    content={"Learn More"}
-                                    btnStyle={
-                                        "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white mt-4"
-                                    }
+                        <FadeInElement>
+                            <div
+                                className="flex flex-col sm:items-center sm:text-center"
+                                key={i}
+                            >
+                                <img
+                                    src={`${project.img}`}
+                                    alt={`${project.title} Image`}
+                                    className="h-[330px] sm:h-[250px] md:h-[250px] w-full max-w-[650px] sm:max-w-[500px] object-cover rounded-md"
                                 />
+                                <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[20px]">
+                                    {project.title}
+                                </h3>
+                                <p className="text-[18px] mb-[13px] sm:text-[16px]">
+                                    {project.content}
+                                </p>
+                                <div className="sm:flex sm:justify-center">
+                                    <Button
+                                        link={project.link}
+                                        content={"Learn More"}
+                                        btnStyle={
+                                            "bg-[#336699] text-white before:bg-[#0f172a] hover:border-white mt-4"
+                                        }
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        </FadeInElement>
                     );
                 })}
             </div>
