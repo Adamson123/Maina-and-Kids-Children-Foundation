@@ -41,7 +41,7 @@ const Objectives = () => {
             className="flex justify-center flex-col sm:px-[16px]  md:px-[35px] sm:gap-[30px] gap-[50px] lg:px-[60px] xl:px-[100px] 2xl:px-[200px] sm:overflow-hidden"
         >
             <motion.div
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 1, ease: "easeOut" }}
