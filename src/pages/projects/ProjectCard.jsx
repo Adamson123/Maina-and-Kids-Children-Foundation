@@ -61,7 +61,7 @@ export const ProjectChildCareCard = ({ childCareStory }) => {
             <img
                 src={childCareStory.image}
                 alt={`${childCareStory.title} image`}
-                className="rounded-md object-cover max-h-[320px] md:max-h-[280px] w-[50%] sm:w-full  sm:max-h-[290px]"
+                className="rounded-md object-cover max-h-[320px] md:max-h-[280px] w-[50%] sm:w-full  sm:max-h-[280px]"
             />
             <div className="leading-7 w-[50%] sm:w-full sm:text-[16px]">
                 <p>
