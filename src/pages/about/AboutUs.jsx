@@ -142,11 +142,11 @@ const AboutUs = () => {
                         <div className="flex items-center -space-x-[4px] w-full py-5">
                             <div className="relative w-full">
                                 <div className="border-[4px] border-transparent  border-r-purple-300 border-b-purple-300  rounded-br-2xl h-20 sm:h-12"></div>
-                                <div className="border-[4px] border-transparent border-t-purple-300 border-l-purple-300  rounded-tl-2xl h-20 sm:h-12 -translate-x-[8px] -translate-y-[4px]"></div>
+                                <div className="border-[4px] border-transparent border-t-purple-300 border-l-purple-300  rounded-tl-2xl h-20 sm:h-12 -translate-x-[8px] -translate-y-[4.5px]"></div>
                             </div>
                             <div className="relative w-full">
                                 <div className="border-[4px] border-transparent  border-l-purple-300 border-b-purple-300  rounded-bl-2xl h-20 sm:h-12"></div>
-                                <div className="border-[4px] border-transparent border-t-purple-300 border-r-purple-300  rounded-tr-2xl h-20 sm:h-12 translate-x-[8px] -translate-y-[4px]"></div>
+                                <div className="border-[4px] border-transparent border-t-purple-300 border-r-purple-300  rounded-tr-2xl h-20 sm:h-12 translate-x-[8px] -translate-y-[4.5px]"></div>
                             </div>
                         </div>
                     </div>
