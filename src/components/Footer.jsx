@@ -80,11 +80,31 @@ const links = [
 ];
 
 const socialLinks = [
-    { href: "#", icon: <FaYoutube />, title: "Youtube" },
-    { href: "#", icon: <FaFacebookF />, title: "Facebook" },
-    { href: "#", icon: <FaXTwitter />, title: "Twitter" },
-    { href: "#", icon: <FaInstagram />, title: "Instagram" },
-    { href: "#", icon: <FaLinkedinIn />, title: "LinkedIn" },
+    {
+        href: "https://youtube.com/@maina_and_kids",
+        icon: <FaYoutube />,
+        title: "Youtube",
+    },
+    {
+        href: "https://www.facebook.com/MainaandkidsChildrenFoundation",
+        icon: <FaFacebookF />,
+        title: "Facebook",
+    },
+    {
+        href: "https://x.com/Maina_and_kids",
+        icon: <FaXTwitter />,
+        title: "Twitter",
+    },
+    {
+        href: "https://www.instagram.com/maina_and_kids",
+        icon: <FaInstagram />,
+        title: "Instagram",
+    },
+    {
+        href: "https://www.linkedin.com/company/mainaandkids",
+        icon: <FaLinkedinIn />,
+        title: "LinkedIn",
+    },
 ];
 
 const Form = () => {
@@ -148,7 +168,7 @@ const Footer = () => {
                     {socialLinks.map((social, index) => (
                         <a
                             href={social.href}
-                            className="hover:text-[#0f172a]"
+                            className="hover:text-[#a0a0a0]"
                             title={social.title}
                             key={index}
                         >

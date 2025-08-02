@@ -40,11 +40,8 @@ const RecentCauses = () => {
             <div className="grid sm:grid-cols-1 grid-cols-2 min-w-full sm:gap-y-[40px] md:gap-[60px] lg:gap-[80px] xl:gap-[100px] 2xl:gap-[110px]">
                 {recentActivities.map((project, i) => {
                     return (
-                        <FadeInElement>
-                            <div
-                                className="flex flex-col sm:items-center sm:text-center"
-                                key={i}
-                            >
+                        <FadeInElement key={i}>
+                            <div className="flex flex-col sm:items-center sm:text-center">
                                 <img
                                     src={`${project.img}`}
                                     alt={`${project.title} Image`}

@@ -16,7 +16,7 @@ export const ProjectCard = ({ project }) => {
                 {/* First Content*/}
                 <div className="flex items-center gap-10 leading-7 max-w-[1320px] sm:flex-col-reverse">
                     <img
-                        className="rounded-md w-[50%] sm:w-full h-full object-cover md:max-h-[300px]"
+                        className="rounded-md w-[50%] sm:w-full h-full object-cover max-h-[310px]"
                         src={firstContent.image}
                         alt={`${project.title} image`}
                     />
@@ -40,7 +40,7 @@ export const ProjectCard = ({ project }) => {
                         ))}
                     </div>
                     <img
-                        className="rounded-md  h-full md:max-h-[300px] w-[50%] sm:w-full object-cover"
+                        className="rounded-md  h-full max-h-[310px] w-[50%] sm:w-full object-cover"
                         src={secondContent.image}
                         alt={`${project.title} image`}
                     />
@@ -65,7 +65,7 @@ export const ProjectChildCareCard = ({ childCareStory }) => {
             <img
                 src={childCareStory.image}
                 alt={`${childCareStory.title} image`}
-                className="rounded-md object-cover max-h-[250px] xl:max-h-[320px] 2xl:max-h-[320px]  w-[50%] sm:w-full"
+                className="rounded-md object-cover max-h-[310px] w-[50%] sm:w-full"
             />
             <div className="leading-7 w-[50%] sm:w-full sm:text-[16px]">
                 <p>

@@ -139,13 +139,13 @@ const Navbar = () => {
                         }`}
                     >
                         <a
-                            href="tel:+23407056615346"
+                            href={`tel:${contact.number}`}
                             className="flex items-center gap-1 hover:cursor-pointer hover:bg-[#e7e5e5] py-2 p-5"
                         >
                             <BiPhone /> {contact.number}
                         </a>
                         <a
-                            href="mailto:mainakids66@gmail.com"
+                            href={`mailto:${contact.email}`}
                             className="flex items-center gap-1 hover:cursor-pointer lowercase hover:bg-[#e7e5e5] py-2 p-5"
                         >
                             <BiMailSend /> {contact.email}

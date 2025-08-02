@@ -22,9 +22,7 @@ const Homepage = () => {
                 {/* <DedicatedService/> */}
 
                 <RecentCauses />
-
                 <Stories />
-
                 <Portfolio />
                 <Team />
             </div>

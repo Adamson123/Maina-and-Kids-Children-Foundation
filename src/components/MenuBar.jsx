@@ -16,9 +16,7 @@ const MenuBar = () => {
             {isClicked && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-full md:hidden lg:hidden xl:hidden 2xl:hidden z-[90]">
                     <section
-                        className={`${
-                            isClicked ? "translate-x-0" : "translate-x-[-100%]"
-                        } h-screen w-full fixed top-0 right-0 bg-[#f7faf9] transition-all duration-200 transform shadow-2xl rounded-md`}
+                        className={`translate-x-0 h-screen w-full fixed top-0 right-0 bg-[#f7faf9] transition-all duration-200 transform shadow-2xl rounded-md`}
                     >
                         <div className="relative w-full">
                             {/* closing icon on menu bar */}
@@ -58,14 +56,14 @@ const MenuBar = () => {
                                     </span>
                                     <div className="pl-3 font-thin text-base">
                                         <a
-                                            href="tel:+23407056615346"
+                                            href={`tel:${contact.number}`}
                                             className="flex items-center gap-1 text-base p-2 border-transparent border-l-2 border-l-[#e7e5e5] hover:bg-[#e7e5e5]"
                                         >
                                             <BiPhone />
                                             {contact.number}
                                         </a>
                                         <a
-                                            href="mailto:mainakids66@gmail.com"
+                                            href={`mailto:${contact.email}`}
                                             className="flex items-center gap-1 text-base p-2 border-transparent border-l-2 border-l-[#e7e5e5] hover:bg-[#e7e5e5] lowercase"
                                         >
                                             <BiMailSend /> {contact.email}
