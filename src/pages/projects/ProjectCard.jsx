@@ -13,9 +13,9 @@ export const ProjectCard = ({ project }) => {
             <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1020px] self-center res-header-size">
                 {project.title}
             </h2>
-            <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838] sm:text-[16px]">
+            <div className="bg-[#F9F9F9] p-12 sm:px-[20px] flex flex-col gap-10 justify-center items-center text-[#443838] sm:text-[16px]">
                 {/* First Content*/}
-                <div className="flex items-center gap-10 leading-7 max-w-[1060px] sm:max-w-[570px] sm:flex-col-reverse">
+                <div className="flex items-center gap-10 leading-7 max-w-[1060px] sm:max-w-[560px] sm:flex-col-reverse">
                     <img
                         className="rounded-md w-[50%] sm:w-full h-full object-cover max-h-[320px] sm:max-h-[290px]"
                         src={firstContent.image}
@@ -31,7 +31,7 @@ export const ProjectCard = ({ project }) => {
                     </div>
                 </div>
                 {/* Second Content*/}
-                <div className="flex items-center gap-10 leading-7 max-w-[1060px] sm:max-w-[570px] sm:flex-col">
+                <div className="flex items-center gap-10 leading-7 max-w-[1060px] sm:max-w-[560px] sm:flex-col">
                     <div className="space-y-7 md:space-y-5 w-[50%]  sm:w-full">
                         {secondContent.texts.map((te, i) => (
                             <p key={i}>
@@ -57,7 +57,7 @@ export const ProjectCard = ({ project }) => {
 
 export const ProjectChildCareCard = ({ childCareStory }) => {
     return (
-        <div className="flex items-center gap-10 max-w-[1060px] sm:max-w-[570px] sm:flex-col">
+        <div className="flex items-center gap-10 max-w-[1060px] sm:max-w-[560px] sm:flex-col">
             <img
                 src={childCareStory.image}
                 alt={`${childCareStory.title} image`}

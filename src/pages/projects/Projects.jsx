@@ -26,7 +26,7 @@ const Projects = () => {
                 <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1070px] self-center res-header-size">
                     Child Care
                 </h2>
-                <div className="bg-[#F9F9F9] p-12 flex flex-col gap-10 justify-center items-center text-[#443838]">
+                <div className="bg-[#F9F9F9] p-12 sm:px-[20px] flex flex-col gap-10 justify-center items-center text-[#443838]">
                     {childCareStories.map((story, i) => (
                         <ProjectChildCareCard key={i} childCareStory={story} />
                     ))}

@@ -158,7 +158,7 @@ const GirlChild = () => {
             </div>
 
             {/* Fourth Section */}
-            <div className="px-[100px] sm:px-[30px] space-y-5 md:px-[40px]">
+            <div className="px-[100px] sm:px-[20px] space-y-5 md:px-[40px]">
                 {/* Header */}
                 <h1 className="font-extrabold text-[#0F172A] res-header-size">
                     Projects
