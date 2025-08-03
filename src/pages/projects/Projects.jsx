@@ -13,7 +13,7 @@ const Projects = () => {
     useScrollToHash();
 
     return (
-        <div className="pt-40 flex flex-col gap-32 pb-32 w-full">
+        <main className="pt-40 flex flex-col gap-32 pb-32 w-full text-[18px]">
             <ProjectCard project={safenetProgram} />
             <ProjectCard project={almajiriInTech} />
             <ProjectCard project={mainaKidsFoundation} />
@@ -34,7 +34,7 @@ const Projects = () => {
                     <GetInvolvedButton />
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

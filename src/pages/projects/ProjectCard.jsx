@@ -13,7 +13,7 @@ export const ProjectCard = ({ project }) => {
             <h2 className="font-bold text-center text-primary-blue mb-7 max-w-[1020px] self-center res-header-size">
                 {project.title}
             </h2>
-            <div className="bg-[#F9F9F9] p-12 sm:px-[20px] flex flex-col gap-10 justify-center items-center text-[#443838] sm:text-[16px]">
+            <div className="bg-[#F9F9F9] p-12 sm:px-[20px] flex flex-col gap-10 justify-center items-center text-[#443838]">
                 {/* First Content*/}
                 <div className="flex items-center gap-10 leading-7 max-w-[1060px] sm:max-w-[560px] sm:flex-col-reverse">
                     <img
@@ -63,7 +63,7 @@ export const ProjectChildCareCard = ({ childCareStory }) => {
                 alt={`${childCareStory.title} image`}
                 className="rounded-md object-cover max-h-[320px] md:max-h-[280px] w-[50%] sm:w-full  sm:max-h-[280px]"
             />
-            <div className="leading-7 w-[50%] sm:w-full sm:text-[16px]">
+            <div className="leading-7 w-[50%] sm:w-full">
                 <p>
                     <strong className="text-primary-blue">
                         {childCareStory.title}:{" "}

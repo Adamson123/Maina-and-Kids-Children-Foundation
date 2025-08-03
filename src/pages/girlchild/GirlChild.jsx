@@ -13,7 +13,7 @@ const GirlChild = () => {
     useScrollToHash();
 
     return (
-        <div className="pt-20">
+        <main className="pt-20">
             {/* First Section */}
             <div className="">
                 {/* Header 1 */}
@@ -160,7 +160,7 @@ const GirlChild = () => {
                 <DonateButton />
                 <GetInvolvedButton />
             </div>
-        </div>
+        </main>
     );
 };
 

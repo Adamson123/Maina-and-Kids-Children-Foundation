@@ -32,10 +32,10 @@ const Team = () => {
                                 alt={person.speakerName + " image"}
                                 className="min-h-[120px] min-w-[120px] max-h-[120px] max-w-[120px] rounded-full object-cover"
                             />
-                            <p className="text-center sm:text-sm text-lg text-primary-blue">
+                            <p className="text-center text-[20px] text-lg text-primary-blue">
                                 {person.speakerName}
                             </p>
-                            <p className="text-center sm:text-xs text-[#0f172a] leading-5">
+                            <p className="text-center text-[16px] text-[#0f172a] leading-5">
                                 {person.speakerPosition}
                             </p>
                         </div>

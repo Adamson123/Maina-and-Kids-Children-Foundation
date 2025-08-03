@@ -50,7 +50,7 @@ const RecentCauses = () => {
                                 <h3 className="font-extrabold text-[32px] text-[#0F172A] my-[10px] md:whitespace-nowrap md:text-[23px] sm:text-[20px]">
                                     {project.title}
                                 </h3>
-                                <p className="text-[18px] mb-[13px] sm:text-[16px]">
+                                <p className="mb-[13px] sm:text-[16px]">
                                     {project.content}
                                 </p>
                                 <div className="sm:flex sm:justify-center">

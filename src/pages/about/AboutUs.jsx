@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Button from "../../components/Button";
 import {
     founder,
     threeSpeakers1,
@@ -27,7 +26,7 @@ const AboutUs = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center gap-32 sm:gap-16 px-16 sm:px-2 items-center text-[#453838] pt-40">
+        <main className="flex flex-col justify-center gap-32 sm:gap-16 px-16 sm:px-2 items-center text-[#453838] pt-40">
             <div className="flex flex-col gap-8">
                 {/* head */}
                 <h1 className="text-[#336699] uppercase font-bold res-header-size text-center">
@@ -185,7 +184,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

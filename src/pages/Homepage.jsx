@@ -12,7 +12,7 @@ import FadeInElement from "../components/FadeInElement";
 
 const Homepage = () => {
     return (
-        <>
+        <main>
             <div className="flex flex-col gap-32 sm:gap-24 md:gap-28">
                 <Hero />
                 <FadeInElement>
@@ -27,7 +27,7 @@ const Homepage = () => {
                 <Team />
             </div>
             <Statistics />
-        </>
+        </main>
     );
 };
 
