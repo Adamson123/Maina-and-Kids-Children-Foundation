@@ -61,8 +61,6 @@ export const girlChildProjectExplanation = [
                     "Colorful flashcards, banners, and instructional materials for lasting impact",
 
                     "Community engagement through placards and open dialogue on menstrual dignity",
-
-                    "Our goal is simple: End period poverty and empower girls with dignity and knowledge. Together, we are creating safe spaces, one community at a time.",
                 ],
             },
             {
@@ -74,7 +72,7 @@ export const girlChildProjectExplanation = [
     },
     {
         id: "policy-making",
-        title: "Policy Awareness",
+        title: "Policy Making Awareness",
         content: [
             {
                 type: "paragraph",
