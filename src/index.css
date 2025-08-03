@@ -113,8 +113,9 @@
     animation: slideInFromBottom 2s ease-out;
 }
 
-.hover-on-container {
+/* .hover-on-container {
     overflow: hidden;
+    position: relative;
 }
 
 .hover-on-container::before {
@@ -135,6 +136,30 @@
 
 .hover-on-container:hover::before {
     scale: 1;
+} */
+
+.hover-on-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-on-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0.15;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.hover-on-container:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .arrow-bounce {

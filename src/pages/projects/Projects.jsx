@@ -5,8 +5,6 @@ import {
     safenetProgram,
 } from "../../data/projects";
 import { ProjectCard, ProjectChildCareCard } from "./ProjectCard";
-
-import Button from "../../components/Button";
 import DonateButton from "../../components/DonateButton";
 import useScrollToHash from "../../hooks/useScrollToHash";
 import GetInvolvedButton from "../../components/GetInvolvedButton";

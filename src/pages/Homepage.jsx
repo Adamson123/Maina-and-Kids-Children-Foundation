@@ -6,7 +6,7 @@ import Portfolio from "./home/Portfolio";
 import Team from "./home/Team";
 import Statistics from "./home/Statistics";
 import AboutUs from "./home/AboutUs";
-import Stories from "./home/Stories";
+import Stories from "./home/story/Stories";
 import FadeInElement from "../components/FadeInElement";
 // import DedicatedService from './home/DedicatedService'
 

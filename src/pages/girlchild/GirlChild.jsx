@@ -4,11 +4,10 @@ import Health from "/assets/Rectangle25.webp";
 import Skill from "/assets/Rectangle26.webp";
 import Confidence from "/assets/Rectangle24.webp";
 import Line from "/assets/Line2.webp";
-import Button from "../components/Button";
-import { girlChildProjects } from "../data/projects";
-import DonateButton from "../components/DonateButton";
-import useScrollToHash from "../hooks/useScrollToHash";
-import GetInvolvedButton from "../components/GetInvolvedButton";
+import DonateButton from "../../components/DonateButton";
+import useScrollToHash from "../../hooks/useScrollToHash";
+import GetInvolvedButton from "../../components/GetInvolvedButton";
+import Projects from "./Projects";
 
 const GirlChild = () => {
     useScrollToHash();
@@ -156,65 +155,7 @@ const GirlChild = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Fourth Section */}
-            <div className="px-[100px] sm:px-[20px] space-y-5 md:px-[40px]">
-                {/* Header */}
-                <h1 className="font-extrabold text-[#0F172A] res-header-size">
-                    Projects
-                </h1>
-                <div className="flex gap-8 justify-center sm:flex-col md:text-base leading-8 md:leading-7">
-                    {/* 1 */}
-                    <div className="flex flex-col gap-8">
-                        {girlChildProjects.slice(0, 2).map((project, index) => (
-                            <div
-                                id={project.id}
-                                key={index}
-                                className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg h-full scroll-mt-36`}
-                            >
-                                <h3 className="text-2xl sm:text-[20px] font-semibold">
-                                    {project.title}
-                                </h3>
-                                <div className="h-[250px]">
-                                    <img
-                                        alt={`${project.title} image`}
-                                        src={project.image}
-                                        className="rounded-lg h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div className="text-[20px] sm:text-[16px]">
-                                    {project.content}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    {/* 2 */}
-                    <div className="flex flex-col gap-8">
-                        {girlChildProjects.slice(2, 4).map((project, index) => (
-                            <div
-                                id={project.id}
-                                key={index}
-                                className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg`}
-                            >
-                                <h3 className="text-2xl sm:text-[20px] font-semibold">
-                                    {project.title}
-                                </h3>
-                                <div className="h-[250px]">
-                                    <img
-                                        alt={`${project.title} image`}
-                                        src={project.image}
-                                        className="rounded-lg h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div className="text-[20px] sm:text-[16px]">
-                                    {project.content}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
+            <Projects />
             <div className="flex  sm:flex-col px-[100px] gap-6  sm:gap-4 sm:px-[50px] justify-center items-center my-20">
                 <DonateButton />
                 <GetInvolvedButton />

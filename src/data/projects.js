@@ -1,40 +1,5 @@
 import { base } from "./basename";
 
-const getGirlChildProjectsImgPath = (name) => {
-    return `${base.basename}/assets/girl-child-projects/${name}.webp`;
-};
-
-export const girlChildProjects = [
-    {
-        title: "World Menstrual Hygiene Day",
-        content:
-            "To celebrate the world menstrual hygiene day, Girl Child Program in collaboration with Maden Health Care Foundation reached out to under served communities and shared over 250 pads and raised awareness on menstrual health and debunk stigma’s.",
-        image: getGirlChildProjectsImgPath("hygiene"),
-        id: "hygiene",
-    },
-
-    {
-        title: "Policy Making Awareness",
-        content:
-            "Creating awareness the girl child, making decisions and being part of decision making in their community or environment.",
-        image: getGirlChildProjectsImgPath("policy-making"),
-        id: "policy-making",
-    },
-    {
-        title: "Sister to Sister Mentorship",
-        content:
-            "A mentor-mentee program curated to help build confidence, improve the state of well being of girl child amd general life.",
-        image: getGirlChildProjectsImgPath("sister-to-sister"),
-        id: "sister-to-sister",
-    },
-    {
-        title: "International Women’s Day (Rising Stars)",
-        content: `To commemorate the international women’s day, Girl Child Program in collaboration with Gals Voices held a one day event where they taught girls from different backgrounds confidence building, vision boarding and how to gauge their strengths.`,
-        image: getGirlChildProjectsImgPath("rising-stars"),
-        id: "women's-day",
-    },
-];
-
 export const NavbarProjects = [
     { name: "Girl Child", link: "/girl-child" },
     {

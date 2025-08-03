@@ -1,13 +1,14 @@
 import { useState } from "react";
-import stories from "../../data/stories";
-import { CgClose } from "react-icons/cg";
-import FadeInElement from "../../components/FadeInElement";
+import stories from "../../../data/stories";
+import FadeInElement from "../../../components/FadeInElement";
+import StoryPopUp from "./StoryPopUp";
+//TODO: Put components into seperate files
 
 const StoryCard = ({ story, setCurrentStory }) => {
     return (
         <div
             onClick={() => setCurrentStory(story)}
-            className={`flex flex-col items-center gap-3 h-full max-w-[500px] cursor-pointer transition-all duration-300 ease-in-out relative hover-on-container`}
+            className={`flex flex-col items-center gap-3 h-full max-w-[500px] cursor-pointer transition-all duration-300 ease-in-out hover-on-container`}
         >
             {/* <div className="absolute w scale-0 hover:scale-1 bg-white opacity-[0.2]"></div> */}
             <div className="w-full h-[250px]">
@@ -67,28 +68,11 @@ const Stories = () => {
                 )}
             </div>
 
-            <div
-                onClick={() => setCurrentStory(null)}
-                className={`fixed inset-0 bg-black/55 z-[100] items-center justify-center flex flex-col gap-2 p-3 transition-all ${
-                    currentStory ? "scale-1" : "scale-0"
-                }`}
-            >
-                <p className="text-white flex items-center justify-between font-semibold gap-3 max-w-[460px] w-full p-1 flex-col">
-                    <CgClose
-                        className="cursor-pointer text-gray-400 h-8 w-8 p-2 
-                        rounded-full border border-gray-400 hover:bg-gray-400/30"
-                    />
-                    <span>{currentStory?.title}</span>
-                </p>
-                <div
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex flex-col gap-5 text-left bg-white max-w-[470px] rounded-md p-7 max-h-[600px] overflow-y-auto sm:text-[16px]"
-                >
-                    {currentStory?.story.map((paragraph, i) => {
-                        return <p key={i}>{paragraph}</p>;
-                    })}
-                </div>
-            </div>
+            {/*  Pop Up */}
+            <StoryPopUp
+                currentStory={currentStory}
+                setCurrentStory={setCurrentStory}
+            />
         </div>
     );
 };
