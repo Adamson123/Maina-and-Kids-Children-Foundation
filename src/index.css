@@ -148,7 +148,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 150%;
+    /* width: 150%; */
+    width: max(120%, 120vh);
     aspect-ratio: 1 / 1;
     background: white;
     transform: translate(-50%, -50%) scale(0);
