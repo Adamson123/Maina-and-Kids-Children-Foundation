@@ -7,7 +7,7 @@ const subscribe = async (email) => {
     let message = { error: "", success: "" };
 
     const showSuccess = () => {
-        const success = "Thank you for signing up for our newsletter 💙";
+        const success = "Thank you for signing up for our newsletter";
         toast.success(success, { style: { textAlign: "center" } });
         message = { ...message, success };
     };

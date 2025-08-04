@@ -1,8 +1,9 @@
 // axiosInstance.ts or axios.js
 import axios from "axios";
 
+const origin = "https://maina-and-kids-backend.onrender.com";
 const axiosInstance = axios.create({
-    baseURL: "https://maina-and-kids-backend.onrender.com/api",
+    baseURL: `${origin}/api`,
     headers: {
         "Content-Type": "application/json",
     },
