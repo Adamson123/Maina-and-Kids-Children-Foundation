@@ -2,6 +2,7 @@ import { useState } from "react";
 import axiosInstance from "../../lib/axiosInstance";
 import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
+import { BiCheck } from "react-icons/bi";
 
 const subscribe = async (email) => {
     let message = { error: "", success: "" };
@@ -69,7 +70,11 @@ const SubscribeForm = () => {
                 </>
             );
         } else if (isSubsribed) {
-            return "Submitted";
+            return (
+                <>
+                    Submitted <BiCheck className="h-6 w-6" />
+                </>
+            );
         } else {
             return "Submit";
         }
