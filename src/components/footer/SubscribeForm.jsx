@@ -13,8 +13,9 @@ const subscribe = async (email) => {
         message = { ...message, success };
     };
 
-    const showError = () => {
-        const error = "There was an error signing up. Please try again later.";
+    const showError = (
+        error = "There was an error signing up. Please try again later."
+    ) => {
         toast.error(error, { style: { textAlign: "center" } });
         message = { ...message, error };
     };
@@ -34,6 +35,8 @@ const subscribe = async (email) => {
 
             if (status === 409) {
                 showSuccess();
+            } else if (status === 400) {
+                showError("Invalid email address");
             } else {
                 showError();
             }
