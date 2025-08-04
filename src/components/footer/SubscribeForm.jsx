@@ -42,7 +42,7 @@ const subscribe = async (email) => {
             console.error("💀 Unknown error:", error);
         }
     }
-    //TODO: Not useful for now
+
     return message;
 };
 
