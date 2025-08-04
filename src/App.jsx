@@ -10,7 +10,7 @@ import Root from "./layout/Root";
 import { base } from "./data/basename";
 
 // Direct imports (no lazy)
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/home/Homepage";
 import GirlChild from "./pages/girlchild/GirlChild";
 import AboutUs from "./pages/about/AboutUs";
 import Projects from "./pages/projects/Projects";

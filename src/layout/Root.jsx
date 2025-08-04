@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import MenuBar from "../components/MenuBar";
 import StringText from "../components/10th Anniversary/StringText";
 import AnniversaryModal from "../components/10th Anniversary/AnniversaryModal";

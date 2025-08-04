@@ -1,12 +1,14 @@
-import image1 from "/assets/portfolio-img-1.webp";
-import image2 from "/assets/portfolio-img-2.webp";
-import image3 from "/assets/portfolio-img-3.webp";
-
-//import image4 from "/assets/portfolio-img-4.webp";
+import image1 from "/assets/portfolio/portfolio-img-1.webp";
+import image2 from "/assets/portfolio/portfolio-img-2.webp";
+import image3 from "/assets/portfolio/portfolio-img-3.webp";
+import image4 from "/assets/portfolio/portfolio-img-4.webp";
+import image5 from "/assets/portfolio/portfolio-img-5.webp";
+import image6 from "/assets/portfolio/portfolio-img-6.webp";
+import image7 from "/assets/portfolio/portfolio-img-7.webp";
 
 const Portfolio = () => {
     // sm:px-[30px] md:px-[50px] lg:px-[60px] xl:px-[70px] 2xl:px-[80px]
-    const images = [image1, image2, image3, image1, image2, image3];
+    const images = [image1, image2, image3, image4, image5, image6, image7];
     const ANIMATION_DELAY = 0.5;
     const ANIMATION_DURATION = 40;
     return (
@@ -44,13 +46,14 @@ const Portfolio = () => {
                         <img
                             src={image}
                             alt={`Portfolio ${index + 1}`}
+                            style={{ borderRadius: "25px" }}
                             className="w-full h-full object-cover"
                         />
                     </div>
                 ))}
             </div>
 
-            {/* Big screens */}
+            {/* Small screens */}
             <div
                 className="w-full max-w-[1536px] relative h-[260px] image-slide overflow-hidden
             [mask-image:linear-gradient(to_right,transparent,white_7%,white_93%,transparent)] md:hidden lg:hidden xl:hidden 2xl:hidden scrollbar-none"
