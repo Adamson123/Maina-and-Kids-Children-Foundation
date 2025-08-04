@@ -48,6 +48,7 @@ const subscribe = async (email) => {
 const SubscribeForm = () => {
     const [email, setEmail] = useState("");
     const [isSubscribing, setIsSubscribing] = useState(false);
+    const [isSubsribed, setIsSubscribed] = useState(false);
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -56,6 +57,21 @@ const SubscribeForm = () => {
         setIsSubscribing(false);
         if (message.success) {
             setEmail("");
+            setIsSubscribed(true);
+        }
+    };
+
+    const getSumbitButtonLabel = () => {
+        if (isSubscribing) {
+            return (
+                <>
+                    Submitting <LoaderIcon className="h-9 w-9" />
+                </>
+            );
+        } else if (isSubsribed) {
+            return "Submitted";
+        } else {
+            return "Submit";
         }
     };
 
@@ -80,17 +96,15 @@ const SubscribeForm = () => {
                 className="border border-primary-blue rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent min-w-[calc(100%-70px)] max-w-[calc(100%-70px)] sm:min-w-full"
             />
             <button
-                disabled={isSubscribing}
+                disabled={isSubscribing || isSubsribed}
                 type="submit"
-                className="bg-primary-blue text-white rounded-md p-2 hover:bg-blue-500 transition-colors duration-300 max-w-[calc(100%-150px)] min-w-[calc(100%-150px)] sm:min-w-[calc(100%-50px)] flex justify-center items-center gap-2"
+                className={`text-white rounded-md p-2 transition-colors duration-300 max-w-[calc(100%-150px)] min-w-[calc(100%-150px)] sm:min-w-[calc(100%-50px)] flex justify-center items-center gap-2 ${
+                    isSubsribed
+                        ? "bg-gray-500"
+                        : "bg-primary-blue  hover:bg-blue-500"
+                }`}
             >
-                {isSubscribing ? (
-                    <>
-                        Submitting <LoaderIcon className="h-9 w-9" />
-                    </>
-                ) : (
-                    "Submit"
-                )}
+                {getSumbitButtonLabel()}
             </button>
         </form>
     );
