@@ -7,13 +7,13 @@ const subscribe = async (email) => {
     let message = { error: "", success: "" };
 
     const showSuccess = () => {
-        const success = "Thank you for signing up to our newsletter💙";
+        const success = "Thank you for signing up for our newsletter 💙";
         toast.success(success, { style: { textAlign: "center" } });
         message = { ...message, success };
     };
 
     const showError = () => {
-        const error = "Error signing up, please try again later";
+        const error = "There was an error signing up. Please try again later.";
         toast.error(error, { style: { textAlign: "center" } });
         message = { ...message, error };
     };
