@@ -225,3 +225,7 @@
 .image-slide:hover .portfolio-image {
     animation-play-state: paused;
 }
+
+.use-theme-bg {
+    background: transparent !important;
+}

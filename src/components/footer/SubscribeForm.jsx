@@ -1,121 +1,117 @@
-import { useState } from "react";
-import axiosInstance from "../../lib/axiosInstance";
-import axios from "axios";
-import toast, { LoaderIcon } from "react-hot-toast";
-import { BiCheck } from "react-icons/bi";
+// import { useState } from "react";
+// import axiosInstance from "../../lib/axiosInstance";
+// import axios from "axios";
+// import toast, { LoaderIcon } from "react-hot-toast";
+// import { BiCheck } from "react-icons/bi";
 
-const subscribe = async (email) => {
-    let message = { error: "", success: "" };
+// const subscribe = async (email) => {
+//     let message = { error: "", success: "" };
 
-    const showSuccess = () => {
-        const success = "Thank you for signing up for our newsletter";
-        toast.success(success, { style: { textAlign: "center" } });
-        message = { ...message, success };
-    };
+//     const showSuccess = () => {
+//         const success = "Thank you for signing up for our newsletter";
+//         toast.success(success, { style: { textAlign: "center" } });
+//         message = { ...message, success };
+//     };
 
-    const showError = (
-        error = "There was an error signing up. Please try again later."
-    ) => {
-        toast.error(error, { style: { textAlign: "center" } });
-        message = { ...message, error };
-    };
+//     const showError = (
+//         error = "There was an error signing up. Please try again later."
+//     ) => {
+//         toast.error(error, { style: { textAlign: "center" } });
+//         message = { ...message, error };
+//     };
 
-    try {
-        await axiosInstance.post("/newsletter/subscribe", {
-            email,
-        });
-        showSuccess();
-    } catch (error) {
-        if (axios.isAxiosError(error)) {
-            // console.error(
-            //     "❌ Axios error:",
-            //     error.response?.data || error.message
-            // );
-            const status = error.response?.status;
+//     try {
+//         await axiosInstance.post("/newsletter/subscribe", {
+//             email,
+//         });
+//         showSuccess();
+//     } catch (error) {
+//         if (axios.isAxiosError(error)) {
+//             const status = error.response?.status;
 
-            if (status === 409) {
-                showSuccess();
-            } else if (status === 400) {
-                showError("Invalid email address");
-            } else {
-                showError();
-            }
-        } else {
-            showError();
-            console.error("💀 Unknown error:", error);
-        }
-    }
+//             if (status === 409) {
+//                 showSuccess();
+//             } else if (status === 400) {
+//                 showError("Invalid email address");
+//             } else {
+//                 showError();
+//             }
+//         } else {
+//             showError();
+//             console.error("💀 Unknown error:", error);
+//         }
+//     }
 
-    return message;
-};
+//     return message;
+// };
 
-const SubscribeForm = () => {
-    const [email, setEmail] = useState("");
-    const [isSubscribing, setIsSubscribing] = useState(false);
-    const [isSubsribed, setIsSubscribed] = useState(false);
+// const SubscribeForm = () => {
+//     const [email, setEmail] = useState("");
+//     const [isSubscribing, setIsSubscribing] = useState(false);
+//     const [isSubsribed, setIsSubscribed] = useState(false);
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubscribing(true);
-        const message = await subscribe(email);
-        setIsSubscribing(false);
-        if (message.success) {
-            setEmail("");
-            setIsSubscribed(true);
-        }
-    };
+//     const onSubmit = async (e) => {
+//         e.preventDefault();
+//         setIsSubscribing(true);
+//         const message = await subscribe(email);
+//         setIsSubscribing(false);
+//         if (message.success) {
+//             setEmail("");
+//             setIsSubscribed(true);
+//         }
+//     };
 
-    const getSumbitButtonLabel = () => {
-        if (isSubscribing) {
-            return (
-                <>
-                    Submitting <LoaderIcon className="h-9 w-9" />
-                </>
-            );
-        } else if (isSubsribed) {
-            return (
-                <>
-                    Submitted <BiCheck className="h-6 w-6" />
-                </>
-            );
-        } else {
-            return "Submit";
-        }
-    };
+//     const getSumbitButtonLabel = () => {
+//         if (isSubscribing) {
+//             return (
+//                 <>
+//                     Submitting <LoaderIcon className="h-9 w-9" />
+//                 </>
+//             );
+//         } else if (isSubsribed) {
+//             return (
+//                 <>
+//                     Submitted <BiCheck className="h-6 w-6" />
+//                 </>
+//             );
+//         } else {
+//             return "Submit";
+//         }
+//     };
 
-    return (
-        <form
-            onSubmit={onSubmit}
-            className="flex flex-col gap-5 max-w-[400px] sm:max-w-[330px] sm:items-center"
-        >
-            <h3 className="text-2xl font-semibold sm:text-center max-w-[300px] sm:text-[22px]">
-                Sign Up For Our Monthly Newsletter
-            </h3>
-            <p className="text-sm sm:text-center">
-                Want to hear what we are up to? sign up to get deets on our
-                projects and activities
-            </p>
-            <input
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                type="email"
-                required
-                placeholder="Enter your Email"
-                className="border border-primary-blue rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent min-w-[calc(100%-70px)] max-w-[calc(100%-70px)] sm:min-w-full"
-            />
-            <button
-                disabled={isSubscribing || isSubsribed}
-                type="submit"
-                className={`text-white rounded-md p-2 transition-colors duration-300 max-w-[calc(100%-150px)] min-w-[calc(100%-150px)] sm:min-w-[calc(100%-50px)] flex justify-center items-center gap-2 ${
-                    isSubsribed
-                        ? "bg-gray-500"
-                        : "bg-primary-blue  hover:bg-blue-500"
-                }`}
-            >
-                {getSumbitButtonLabel()}
-            </button>
-        </form>
-    );
-};
+//     return (
+//         <form
+//             onSubmit={onSubmit}
+//             className="flex flex-col gap-5 max-w-[400px] sm:max-w-[330px] sm:items-center"
+//         >
+//             <h3 className="text-2xl font-semibold sm:text-center max-w-[300px] sm:text-[22px]">
+//                 Sign Up For Our Monthly Newsletter
+//             </h3>
+//             <p className="text-sm sm:text-center">
+//                 Want to hear what we are up to? sign up to get deets on our
+//                 projects and activities
+//             </p>
+//             <input
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 value={email}
+//                 type="email"
+//                 required
+//                 placeholder="Enter your Email"
+//                 className="border border-primary-blue rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent min-w-[calc(100%-70px)] max-w-[calc(100%-70px)] sm:min-w-full"
+//             />
+//             <button
+//                 disabled={isSubscribing || isSubsribed}
+//                 type="submit"
+//                 className={`text-white rounded-md p-2 transition-colors duration-300 max-w-[calc(100%-150px)] min-w-[calc(100%-150px)] sm:min-w-[calc(100%-50px)] flex justify-center items-center gap-2 ${
+//                     isSubsribed
+//                         ? "bg-gray-500"
+//                         : "bg-primary-blue  hover:bg-blue-500"
+//                 }`}
+//             >
+//                 {getSumbitButtonLabel()}
+//             </button>
+//         </form>
+//     );
+// };
 
-export default SubscribeForm;
+// export default SubscribeForm;

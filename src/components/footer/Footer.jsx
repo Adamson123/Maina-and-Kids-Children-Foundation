@@ -70,7 +70,8 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import SubscribeForm from "./SubscribeForm";
+// import SubscribeForm from "./SubscribeForm";
+import NewsletterForm from "./NewsLetterForm";
 
 const links = [
     { href: "/about", label: "About Us" },
@@ -110,10 +111,10 @@ const socialLinks = [
 
 const Footer = () => {
     return (
-        <div className="bg-black items-center text-white pt-20 flex flex-col gap-16">
-            <div className="grid grid-cols-2 sm:grid-cols-1 sm:gap-y-10  sm:grid-rows-2 sm:justify-evenly items-start md:px-16 lg:gap-x-28 xl:gap-x-44 2xl:gap-x-[300px]">
+        <div className="bg-black items-center justify-center text-white pt-20 sm:pt-10 flex flex-col gap-16">
+            <div className="grid grid-cols-2 sm:grid-cols-1 i sm:grid-rows-2 sm:items-center sm:gap-y-8 items-start md:px-16 lg:gap-x-28 xl:gap-x-44 2xl:gap-x-[230px] md:gap-x-[40px] p-5">
                 {/* Links */}
-                <div className="grid grid-cols-2 gap-y-[60px] sm:justify-items-center sm:text-[16px]">
+                <div className="grid grid-cols-2 gap-y-[60px] gap-x-[50px] sm:justify-items-center sm:text-[16px]">
                     {links.map((link, index) =>
                         index !== links.length - 1 ? (
                             <Link
@@ -135,7 +136,7 @@ const Footer = () => {
                     )}
                 </div>
                 {/* Form */}
-                <SubscribeForm />
+                <NewsletterForm />
             </div>
             {/*  Social media links*/}
             <div className="text-sm  pb-7 flex gap-7 sm:flex-col text-center items-center justify-center">
