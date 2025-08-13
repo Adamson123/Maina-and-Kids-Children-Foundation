@@ -24,7 +24,7 @@ const router = createBrowserRouter(
             <Route path="/projects" element={<Projects />} />
         </Route>
     ),
-    { basename: base.basename }
+    { basename: base.basename || "/" }
 );
 
 const App = () => {

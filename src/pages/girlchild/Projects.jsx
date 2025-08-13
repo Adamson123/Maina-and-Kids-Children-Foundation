@@ -6,7 +6,7 @@ import {
 import ProjectExplanationPopUp from "./ProjectExplanationPopUp";
 //TODO: Put components into seperate files
 
-const ProjectCard = ({ project, setCurrentExplanation }) => {
+const ProjectCard = ({ project, setCurrentExplanation, style }) => {
     const findAndSetCurrentExplanation = () => {
         const explanation = girlChildProjectExplanation.find(
             (exp) => exp.id === project.id
@@ -19,7 +19,7 @@ const ProjectCard = ({ project, setCurrentExplanation }) => {
         <div
             onClick={findAndSetCurrentExplanation}
             id={project.id}
-            className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg h-auto scroll-mt-36 cursor-pointer hover-on-container`}
+            className={`p-8 rounded-xl bg-[#F9F9F9] flex flex-col gap-5 shadow-lg scroll-mt-36 cursor-pointer hover-on-container ${style}`}
         >
             <h3 className="text-2xl sm:text-[20px] font-semibold">
                 {project.title}
@@ -47,12 +47,14 @@ const Projects = () => {
             </h1>
             <div className="flex gap-8 justify-center sm:flex-col md:text-base leading-8 md:leading-7">
                 {/* 1 */}
-                <div className="flex flex-col gap-8">
-                    {girlChildProjects.slice(0, 2).map((project, _) => (
+                <div className="flex flex-col gap-8 self-stretch">
+                    {girlChildProjects.slice(0, 2).map((project, i) => (
                         <ProjectCard
                             project={project}
                             key={project.id}
                             setCurrentExplanation={setCurrentExplanation}
+                            //To occupy remaining space in the flex
+                            style={i === 1 && "flex-1"}
                         />
                     ))}
                 </div>

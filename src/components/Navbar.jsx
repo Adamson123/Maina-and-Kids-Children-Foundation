@@ -100,7 +100,7 @@ const Navbar = () => {
                     onMouseOut={() => setIsOurWorkActive(false)}
                     onMouseOver={() => setIsOurWorkActive(true)}
                     onClick={() => setIsOurWorkActive(!isOurWorkActive)}
-                    className={`flex gap-0.5 items-center relative hover:cursor-pointer`}
+                    className={`flex gap-0.5 items-center relative cursor-pointer`}
                 >
                     <span className="flex items-center gap-1 hover:opacity-[0.75]">
                         Our Work
@@ -155,7 +155,7 @@ const Navbar = () => {
                 {/* About Us */}
                 <li
                     onClick={() => navigate("/about")}
-                    className={`hover:cursor-pointer hover:opacity-[0.75] `}
+                    className={`cursor-pointer hover:opacity-[0.75] `}
                 >
                     About Us
                 </li>

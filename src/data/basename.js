@@ -1,1 +1,2 @@
-export const base = { basename: "" };
+///Maina-and-Kids-Children-Foundation
+export const base = { basename: "/" };
